@@ -44,6 +44,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.boss, function (sprite2, oth
     statusbar2.value += -1
 })
 let machinegunpowerup: Sprite = null
+let mySprite3: Sprite = null
 let mySprite2: Sprite = null
 let projectile: Sprite = null
 let counterboss = 0
@@ -323,6 +324,34 @@ game.onUpdateInterval(200, function () {
             mySprite2.setPosition(randint(0, 120), 20)
             mySprite2.setVelocity(0, 100)
             mySprite2.setFlag(SpriteFlag.AutoDestroy, true)
+        }
+        counterboss = 0
+    }
+})
+game.onUpdateInterval(200, function () {
+    if (counterboss == 20) {
+        for (let index = 0; index < 5; index++) {
+            mySprite3 = sprites.create(img`
+                . . . . . . f f f f . . . . . . 
+                . . . . . . f 2 2 f . . . . . . 
+                . . . . . . f f f f . . . . . . 
+                . . . . . . . f f . . . . . . . 
+                . . . . . . . f f . . . . . . . 
+                . . . . . . . f f . . . . . . . 
+                f f f . . . . f f . . . . f f f 
+                f 2 f f f f f 2 2 f f f f f 2 f 
+                f 2 f f f f f 2 2 f f f f f 2 f 
+                f f f . . . . f f . . . . f f f 
+                . . . . . . . f f . . . . . . . 
+                . . . . . . . f f . . . . . . . 
+                . . . . . . . f f . . . . . . . 
+                . . . . . . f f f f . . . . . . 
+                . . . . . . f 2 2 f . . . . . . 
+                . . . . . . f f f f . . . . . . 
+                `, SpriteKind.projectile2)
+            mySprite3.setPosition(randint(0, 120), 20)
+            mySprite3.setVelocity(randint(0, 50), randint(0, 50))
+            mySprite3.setFlag(SpriteFlag.AutoDestroy, true)
         }
         counterboss = 0
     }
