@@ -45,7 +45,6 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.boss, function (sprite2, oth
 })
 let machinegunpowerup: Sprite = null
 let mySprite2: Sprite = null
-let mySprite3: Sprite = null
 let projectile: Sprite = null
 let counterboss = 0
 let Enemy1: Sprite = null
@@ -298,34 +297,6 @@ game.onUpdateInterval(500, function () {
         music.siren.play()
         counterboss = 0
         pause(2000)
-        boss1.setPosition(75, 60)
-        boss1.setVelocity(0, 0)
-    }
-})
-game.onUpdateInterval(200, function () {
-    if (counterboss == 10) {
-        mySprite3 = sprites.create(img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . c c . . . 
-            . . . . . . . . . c c 8 8 c c . 
-            . . . . . . . . c 8 8 8 8 c . . 
-            . . . . . . . c 8 8 8 c c . . . 
-            . . . . . . c 8 8 8 c . . . . . 
-            . . . . . c 8 8 8 c . . . . . . 
-            . . . . . c 8 f 8 c . . . . . . 
-            . . . . . c 8 8 8 c . . . . . . 
-            . . . . . . c c c . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            `, SpriteKind.projectile2)
-        mySprite.setPosition(70, -3)
-        mySprite3.follow(mySprite)
-        pause(100)
-        mySprite3.destroy(effects.disintegrate, 100)
     }
 })
 game.onUpdateInterval(200, function () {
