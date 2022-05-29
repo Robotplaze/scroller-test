@@ -21,7 +21,7 @@ statusbars.onZero(StatusBarKind.Health, function (status) {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.projectile2, function (sprite, otherSprite) {
     otherSprite.destroy()
     statusbar.value += -10
-    boss1.startEffect(effects.halo, 5000)
+    otherSprite.startEffect(effects.halo, 5000)
 })
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
     otherSprite.startEffect(effects.fire, 100)
@@ -247,6 +247,7 @@ forever(function () {
             `, mySprite, 0, -100)
         music.footstep.play()
         machinegunammo += -1
+        pause(10)
         if (machinegunammo <= 0) {
             projectile = sprites.createProjectileFromSprite(img`
                 . . . . . . . . 
@@ -287,7 +288,8 @@ forever(function () {
 game.onUpdateInterval(500, function () {
     if (counterboss == 20) {
         boss1 = sprites.create(assets.image`Boss`, SpriteKind.boss)
-        statusbar2 = statusbars.create(20, 2, StatusBarKind.EnemyHealth)
+        statusbar2 = statusbars.create(40, 2, StatusBarKind.EnemyHealth)
+        statusbar2.setLabel("BOSS:")
         statusbar2.setPosition(72, 6)
         statusbar.max = 10
         boss1.setPosition(randint(0, 100), 25)
@@ -300,27 +302,30 @@ game.onUpdateInterval(500, function () {
 })
 game.onUpdateInterval(200, function () {
     if (counterboss == 20) {
-        mySprite2 = sprites.create(img`
-            . . . . . . . . . . . . . . . . 
-            . f f f . . f f f f . . f f f . 
-            . f f f f . f c c f . f f f f . 
-            . . f c f f f c c f f f c f . . 
-            . . f c c f f f f f f c c f . . 
-            . . f c c c c c c c c c c f . . 
-            . . f c c c c c c c c c c f . . 
-            . . f c c c c c c c c c c f . . 
-            . . f c c c c c c c c c c f . . 
-            . . f f c c c c c c c c f f . . 
-            . . f 4 f c c c c c c f 4 f . . 
-            . . . f 2 f c c c c f 2 f . . . 
-            . . . f 2 2 f f f f 2 2 f . . . 
-            . . . . f 2 2 2 2 2 2 f . . . . 
-            . . . . f 2 2 2 2 2 2 f . . . . 
-            . . . . . f f f f f f . . . . . 
-            `, SpriteKind.projectile2)
-        mySprite2.setPosition(randint(0, 120), 20)
-        mySprite2.setVelocity(0, 100)
-        mySprite2.setFlag(SpriteFlag.AutoDestroy, true)
+        for (let index = 0; index < 5; index++) {
+            mySprite2 = sprites.create(img`
+                . . . . . . . . . . . . . . . . 
+                . f f f . . f f f f . . f f f . 
+                . f f f f . f c c f . f f f f . 
+                . . f c f f f c c f f f c f . . 
+                . . f c c f f f f f f c c f . . 
+                . . f c c c c c c c c c c f . . 
+                . . f c c c c c c c c c c f . . 
+                . . f c c c c c c c c c c f . . 
+                . . f c c c c c c c c c c f . . 
+                . . f f c c c c c c c c f f . . 
+                . . f 4 f c c c c c c f 4 f . . 
+                . . . f 2 f c c c c f 2 f . . . 
+                . . . f 2 2 f f f f 2 2 f . . . 
+                . . . . f 2 2 2 2 2 2 f . . . . 
+                . . . . f 2 2 2 2 2 2 f . . . . 
+                . . . . . f f f f f f . . . . . 
+                `, SpriteKind.projectile2)
+            mySprite2.setPosition(randint(0, 120), 20)
+            mySprite2.setVelocity(0, 100)
+            mySprite2.setFlag(SpriteFlag.AutoDestroy, true)
+        }
+        counterboss = 0
     }
 })
 game.onUpdateInterval(10000, function () {
