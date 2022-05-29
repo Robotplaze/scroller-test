@@ -14,8 +14,8 @@ This repository can be added as an **extension** in MakeCode.
 
 ## Just use and play
 
-*open https://robotplaze.github.io/scroller-test/
-*enjoy!
+* open https://robotplaze.github.io/scroller-test/
+* enjoy!
 
 ## Edit this project ![Build status badge](https://github.com/robotplaze/scroller-test/workflows/MakeCode/badge.svg)
 
