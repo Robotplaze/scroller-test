@@ -2,16 +2,26 @@ namespace SpriteKind {
     export const boss = SpriteKind.create()
     export const bossprite = SpriteKind.create()
     export const powerup = SpriteKind.create()
+    export const projectile2 = SpriteKind.create()
 }
 namespace StatusBarKind {
     export const Ammo = StatusBarKind.create()
 }
+statusbars.onZero(StatusBarKind.EnemyHealth, function (status) {
+    boss1.destroy()
+    music.jumpUp.play()
+})
 statusbars.onZero(StatusBarKind.Health, function (status) {
     mySprite.destroy()
     music.wawawawaa.play()
     effects.starField.endScreenEffect()
     game.over(false, effects.melt)
     music.stopAllSounds()
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.projectile2, function (sprite, otherSprite) {
+    otherSprite.destroy()
+    statusbar.value += -10
+    boss1.startEffect(effects.halo, 5000)
 })
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
     otherSprite.startEffect(effects.fire, 100)
@@ -30,19 +40,19 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite3, ot
     info.changeScoreBy(1)
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.boss, function (sprite2, otherSprite2) {
-    otherSprite2.startEffect(effects.halo, 100)
-    otherSprite2.destroy()
-    music.jumpUp.play()
-    info.changeScoreBy(10)
+    otherSprite2.startEffect(effects.fire, 100)
+    statusbar2.value += -1
 })
 let machinegunpowerup: Sprite = null
-let projectile2: Sprite = null
-let boss1: Sprite = null
+let mySprite2: Sprite = null
+let mySprite3: Sprite = null
 let projectile: Sprite = null
 let counterboss = 0
 let Enemy1: Sprite = null
+let statusbar2: StatusBarSprite = null
 let machinegunammo = 0
 let boolean1 = 0
+let boss1: Sprite = null
 let statusbar: StatusBarSprite = null
 let mySprite: Sprite = null
 game.showLongText("Hit A to start!", DialogLayout.Bottom)
@@ -196,7 +206,7 @@ info.setLife(3)
 info.setScore(0)
 statusbar = statusbars.create(20, 4, StatusBarKind.Health)
 statusbar.attachToSprite(mySprite, 5, 0)
-statusbar.setColor(2, 5)
+statusbar.setColor(2, 15)
 statusbar.setLabel("HP", 1)
 statusbar.value = 100
 game.onUpdateInterval(1000, function () {
@@ -268,7 +278,7 @@ forever(function () {
     }
 })
 forever(function () {
-    if (info.score() >= 50) {
+    if (info.score() >= 100) {
         game.over(true, effects.confetti)
         game.showLongText("You did it!!!", DialogLayout.Bottom)
         music.powerUp.play()
@@ -276,37 +286,71 @@ forever(function () {
     }
 })
 game.onUpdateInterval(500, function () {
-    if (counterboss == 10) {
-        sprites.destroyAllSpritesOfKind(SpriteKind.Enemy, effects.rings, 100)
+    if (counterboss == 20) {
         game.showLongText("A boss has appeared! Be careful!", DialogLayout.Bottom)
         boss1 = sprites.create(assets.image`Boss`, SpriteKind.boss)
+        statusbar2 = statusbars.create(20, 2, StatusBarKind.EnemyHealth)
+        statusbar2.setPosition(72, 6)
+        statusbar.max = 10
         boss1.setPosition(randint(0, 100), 25)
         boss1.setBounceOnWall(true)
         boss1.setVelocity(50, 50)
         music.siren.play()
+        counterboss = 0
+        pause(2000)
+        boss1.setPosition(75, 60)
+        boss1.setVelocity(0, 0)
     }
 })
-game.onUpdateInterval(500, function () {
+game.onUpdateInterval(200, function () {
     if (counterboss == 10) {
-        projectile2 = sprites.createProjectileFromSprite(img`
+        mySprite3 = sprites.create(img`
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
-            . . . . . . . . b . . . . . . . 
-            . . . . . . . b c . . . . . . . 
-            . . . . . b c c c b . . . . . . 
-            . . . . . . b c c c b . . . . . 
-            . . . . . . . c b . . . . . . . 
-            . . . . . . . b . . . . . . . . 
+            . . . . . . . . . . . c c . . . 
+            . . . . . . . . . c c 8 8 c c . 
+            . . . . . . . . c 8 8 8 8 c . . 
+            . . . . . . . c 8 8 8 c c . . . 
+            . . . . . . c 8 8 8 c . . . . . 
+            . . . . . c 8 8 8 c . . . . . . 
+            . . . . . c 8 f 8 c . . . . . . 
+            . . . . . c 8 8 8 c . . . . . . 
+            . . . . . . c c c . . . . . . . 
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
+            `, SpriteKind.projectile2)
+        mySprite.setPosition(70, -3)
+        mySprite3.follow(mySprite)
+        pause(100)
+        mySprite3.destroy(effects.disintegrate, 100)
+    }
+})
+game.onUpdateInterval(200, function () {
+    if (counterboss == 10) {
+        mySprite2 = sprites.create(img`
             . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            `, boss1, 0, 0)
-        projectile2.follow(mySprite)
+            . f f f . . f f f f . . f f f . 
+            . f f f f . f c c f . f f f f . 
+            . . f c f f f c c f f f c f . . 
+            . . f c c f f f f f f c c f . . 
+            . . f c c c c c c c c c c f . . 
+            . . f c c c c c c c c c c f . . 
+            . . f c c c c c c c c c c f . . 
+            . . f c c c c c c c c c c f . . 
+            . . f f c c c c c c c c f f . . 
+            . . f 4 f c c c c c c f 4 f . . 
+            . . . f 2 f c c c c f 2 f . . . 
+            . . . f 2 2 f f f f 2 2 f . . . 
+            . . . . f 2 2 2 2 2 2 f . . . . 
+            . . . . f 2 2 2 2 2 2 f . . . . 
+            . . . . . f f f f f f . . . . . 
+            `, SpriteKind.projectile2)
+        mySprite2.setPosition(randint(0, 100), 20)
+        mySprite2.setVelocity(0, -100)
+        mySprite2.setFlag(SpriteFlag.AutoDestroy, true)
     }
 })
 game.onUpdateInterval(10000, function () {
