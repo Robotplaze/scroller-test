@@ -3,10 +3,16 @@ namespace SpriteKind {
     export const bossprite = SpriteKind.create()
     export const powerup = SpriteKind.create()
     export const projectile2 = SpriteKind.create()
+    export const sniperpowerup = SpriteKind.create()
 }
 namespace StatusBarKind {
     export const Ammo = StatusBarKind.create()
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.sniperpowerup, function (sprite, otherSprite) {
+    boolean2 = 1
+    otherSprite.destroy()
+    snipershots = 5
+})
 statusbars.onZero(StatusBarKind.EnemyHealth, function (status) {
     boss1.destroy()
     music.jumpUp.play()
@@ -43,6 +49,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.boss, function (sprite2, oth
     otherSprite2.startEffect(effects.fire, 100)
     statusbar2.value += -1
 })
+let sniperbullet: Sprite = null
 let machinegunpowerup: Sprite = null
 let mySprite3: Sprite = null
 let mySprite2: Sprite = null
@@ -53,6 +60,8 @@ let statusbar2: StatusBarSprite = null
 let machinegunammo = 0
 let boolean1 = 0
 let boss1: Sprite = null
+let snipershots = 0
+let boolean2 = 0
 let statusbar: StatusBarSprite = null
 let mySprite: Sprite = null
 game.showLongText("Hit A to start!", DialogLayout.Bottom)
@@ -235,6 +244,50 @@ game.onUpdateInterval(1000, function () {
     counterboss += 1
 })
 forever(function () {
+    if (boolean2 == 1) {
+        projectile = sprites.createProjectileFromSprite(img`
+            . . . . . . . . 
+            . . . . . . . . 
+            . . . . . . . . 
+            . . . 6 8 . . . 
+            . . . c c . . . 
+            . . . c c . . . 
+            . . . c c . . . 
+            . . . . . . . . 
+            `, mySprite, 0, -100)
+        music.footstep.play()
+        snipershots += -1
+        pause(1000)
+        if (snipershots <= 0) {
+            projectile = sprites.createProjectileFromSprite(img`
+                . . . . . . . . 
+                . . . . . . . . 
+                . . . . . . . . 
+                . . . 1 1 . . . 
+                . . . 1 1 . . . 
+                . . . 1 1 . . . 
+                . . . 1 1 . . . 
+                . . . . . . . . 
+                `, mySprite, 0, -100)
+            music.pewPew.play()
+            pause(100)
+        }
+    } else {
+        projectile = sprites.createProjectileFromSprite(img`
+            . . . . . . . . 
+            . . . . . . . . 
+            . . . . . . . . 
+            . . . 1 1 . . . 
+            . . . 1 1 . . . 
+            . . . 1 1 . . . 
+            . . . 1 1 . . . 
+            . . . . . . . . 
+            `, mySprite, 0, -100)
+        music.pewPew.play()
+        pause(100)
+    }
+})
+forever(function () {
     if (boolean1 == 1) {
         projectile = sprites.createProjectileFromSprite(img`
             . . . . . . . . 
@@ -286,7 +339,7 @@ forever(function () {
         music.stopAllSounds()
     }
 })
-game.onUpdateInterval(500, function () {
+game.onUpdateInterval(100, function () {
     if (counterboss == 20) {
         boss1 = sprites.create(assets.image`Boss`, SpriteKind.boss)
         statusbar2 = statusbars.create(40, 2, StatusBarKind.EnemyHealth)
@@ -298,9 +351,11 @@ game.onUpdateInterval(500, function () {
         boss1.setVelocity(50, 50)
         music.siren.play()
         counterboss = 0
+    } else {
+        counterboss = counterboss
     }
 })
-game.onUpdateInterval(200, function () {
+game.onUpdateInterval(100, function () {
     if (counterboss == 20) {
         for (let index = 0; index < 5; index++) {
             mySprite2 = sprites.create(img`
@@ -325,7 +380,6 @@ game.onUpdateInterval(200, function () {
             mySprite2.setVelocity(0, 100)
             mySprite2.setFlag(SpriteFlag.AutoDestroy, true)
         }
-        counterboss = 0
     }
 })
 game.onUpdateInterval(200, function () {
@@ -353,7 +407,6 @@ game.onUpdateInterval(200, function () {
             mySprite3.setVelocity(randint(0, 50), randint(0, 50))
             mySprite3.setFlag(SpriteFlag.AutoDestroy, true)
         }
-        counterboss = 0
     }
 })
 game.onUpdateInterval(10000, function () {
@@ -378,4 +431,27 @@ game.onUpdateInterval(10000, function () {
     machinegunpowerup.setPosition(randint(0, 150), 0)
     machinegunpowerup.setVelocity(0, 50)
     machinegunpowerup.setFlag(SpriteFlag.AutoDestroy, false)
+})
+game.onUpdateInterval(10000, function () {
+    sniperbullet = sprites.create(img`
+        . . 1 1 1 1 1 1 1 1 1 1 1 1 . . 
+        . 1 1 1 1 1 1 1 1 1 1 1 1 1 1 . 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 f 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 f f f 1 1 1 1 1 
+        1 1 1 f 1 1 1 1 f f f 1 1 1 1 1 
+        1 1 f f f 1 1 1 f f f 1 1 1 1 1 
+        1 1 1 f 1 1 1 1 1 f 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        . 1 1 1 1 1 1 1 1 1 1 1 1 1 1 . 
+        . . 1 1 1 1 1 1 1 1 1 1 1 1 . . 
+        `, SpriteKind.sniperpowerup)
+    sniperbullet.setPosition(randint(0, 150), 0)
+    sniperbullet.setVelocity(0, 50)
+    sniperbullet.setFlag(SpriteFlag.AutoDestroy, true)
 })
