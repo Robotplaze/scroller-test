@@ -237,6 +237,7 @@ forever(function () {
             . . 4 . . 5 . . 
             `, mySprite, 0, -100)
         music.footstep.play()
+        sprites.destroyAllSpritesOfKind(SpriteKind.Projectile)
         machinegunammo += -1
         if (machinegunammo <= 0) {
             projectile = sprites.createProjectileFromSprite(img`
