@@ -190,6 +190,12 @@ statusbar.attachToSprite(mySprite, 5, 0)
 statusbar.setColor(2, 5)
 statusbar.setLabel("HP", 1)
 statusbar.value = 100
+if (info.score() == 50) {
+    game.over(true, effects.confetti)
+    game.showLongText("You did it!!!", DialogLayout.Bottom)
+    music.powerUp.play()
+    music.stopAllSounds()
+}
 game.onUpdateInterval(1000, function () {
     Enemy1 = sprites.create(img`
         ...........fffffc...........
@@ -224,14 +230,6 @@ game.onUpdateInterval(500, function () {
         boss1.setBounceOnWall(true)
         boss1.setVelocity(50, 50)
         music.siren.play()
-    }
-})
-game.onUpdateInterval(500, function () {
-    if (info.score() == 50) {
-        game.over(true, effects.confetti)
-        game.showLongText("You did it!!!", DialogLayout.Bottom)
-        music.powerUp.play()
-        music.stopAllSounds()
     }
 })
 game.onUpdateInterval(500, function () {

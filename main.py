@@ -187,6 +187,7 @@ mySprite = sprites.create(img("""
     """),
     SpriteKind.player)
 mySprite.set_stay_in_screen(True)
+mySprite.set_position(74, 99)
 controller.move_sprite(mySprite, 100, 0)
 info.set_life(3)
 info.set_score(0)
@@ -232,6 +233,7 @@ def on_update_interval2():
         boss1 = sprites.create(assets.image("""
             Boss
         """), SpriteKind.boss)
+        boss1.set_position(randint(0, 100), 5)
         boss1.set_bounce_on_wall(True)
         boss1.set_velocity(50, 50)
         music.siren.play()
