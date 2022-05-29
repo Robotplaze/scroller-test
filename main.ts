@@ -297,7 +297,6 @@ game.onUpdateInterval(500, function () {
         boss1.setVelocity(50, 50)
         music.siren.play()
         counterboss = 0
-        pause(2000)
     }
 })
 game.onUpdateInterval(200, function () {
