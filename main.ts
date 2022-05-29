@@ -230,13 +230,13 @@ forever(function () {
             . . . . . . . . 
             . . . . . . . . 
             . . . . . . . . 
-            . . . 1 1 . . . 
-            . . . 1 1 . . . 
-            . . . 1 1 . . . 
-            . . . 1 1 . . . 
-            . . . . . . . . 
+            . . . 5 4 . . . 
+            . . 5 4 5 4 . . 
+            . . 4 5 4 5 . . 
+            . 4 5 4 5 4 5 . 
+            . . 4 . . 5 . . 
             `, mySprite, 0, -100)
-        music.pewPew.play()
+        music.footstep.play()
         machinegunammo += -1
         if (machinegunammo <= 0) {
             projectile = sprites.createProjectileFromSprite(img`
