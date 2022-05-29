@@ -12,6 +12,11 @@ This repository can be added as an **extension** in MakeCode.
 * click on **Extensions** under the gearwheel menu
 * search for **https://github.com/robotplaze/scroller-test** and import
 
+## Just use and play
+
+*open https://robotplaze.github.io/scroller-test/
+*enjoy!
+
 ## Edit this project ![Build status badge](https://github.com/robotplaze/scroller-test/workflows/MakeCode/badge.svg)
 
 To edit this repository in MakeCode.
