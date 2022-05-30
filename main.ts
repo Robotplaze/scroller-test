@@ -24,7 +24,9 @@ statusbars.onZero(StatusBarKind.EnemyHealth, function (status) {
     music.jumpUp.play()
 })
 statusbars.onZero(StatusBarKind.nukehealth, function (status) {
-    mySprite2.destroy(effects.fire, 500)
+    while (true) {
+        mySprite2.destroy(effects.fire, 100)
+    }
 })
 statusbars.onZero(StatusBarKind.Health, function (status) {
     mySprite.destroy()
@@ -44,9 +46,6 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSp
     info.changeScoreBy(1)
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.projectile2, function (sprite, otherSprite) {
-    statusbar3 = statusbars.create(10, 2, StatusBarKind.nukehealth)
-    statusbar3.attachToSprite(mySprite2)
-    statusbar3.max = 2
     statusbar3.value += -1
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.powerup, function (sprite, otherSprite) {
@@ -81,7 +80,7 @@ let snipershots = 0
 let boolean2 = 0
 let statusbar: StatusBarSprite = null
 let mySprite: Sprite = null
-game.showLongText("Hit A to start!", DialogLayout.Bottom)
+game.showLongText("Press a to start", DialogLayout.Full)
 music.knock.loop()
 scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -273,10 +272,11 @@ game.onUpdateInterval(5000, function () {
             ................
             `, SpriteKind.projectile2)
         mySprite2.setPosition(randint(0, 120), 20)
-        statusbar3 = statusbars.create(10, 2, StatusBarKind.nukehealth)
-        statusbar3.max = 2
         mySprite2.setVelocity(0, 20)
         mySprite2.setFlag(SpriteFlag.AutoDestroy, true)
+        statusbar3 = statusbars.create(10, 2, StatusBarKind.nukehealth)
+        statusbar3.attachToSprite(mySprite2)
+        statusbar3.max = 2
     }
 })
 game.onUpdateInterval(2000, function () {
