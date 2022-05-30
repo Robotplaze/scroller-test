@@ -215,31 +215,47 @@ info.setLife(3)
 info.setScore(0)
 statusbar = statusbars.create(20, 4, StatusBarKind.Health)
 statusbar.attachToSprite(mySprite, 5, 0)
-statusbar.setColor(2, 15)
+statusbar.setColor(2, 3)
 statusbar.setLabel("HP", 1)
 statusbar.value = 100
 game.onUpdateInterval(5000, function () {
     for (let index = 0; index < 5; index++) {
         mySprite2 = sprites.create(img`
-            . . . . . . . . . . . . . . . . 
-            . f f f . . f f f f . . f f f . 
-            . f f f f . f c c f . f f f f . 
-            . . f c f f f c c f f f c f . . 
-            . . f c c f f f f f f c c f . . 
-            . . f c c c c c c c c c c f . . 
-            . . f c c c c c c c c c c f . . 
-            . . f c c c c c c c c c c f . . 
-            . . f c c c c c c c c c c f . . 
-            . . f f c c c c c c c c f f . . 
-            . . f 4 f c c c c c c f 4 f . . 
-            . . . f 2 f c c c c f 2 f . . . 
-            . . . f 2 2 f f f f 2 2 f . . . 
-            . . . . f 2 2 2 2 2 2 f . . . . 
-            . . . . f 2 2 2 2 2 2 f . . . . 
-            . . . . . f f f f f f . . . . . 
+            ................
+            .fff..ffff..fff.
+            .ffff.fccf.ffff.
+            ..fcfffccfffcf..
+            ..fccffffffccf..
+            ..fccccccccccf..
+            ..fccccccccccf..
+            ..fccccccccccf..
+            ..fccccccccccf..
+            ..ffccccccccff..
+            ..f4fccccccf4f..
+            ...f2fccccf2f...
+            ...f22ffff22f...
+            ....f222222f....
+            ....f222222f....
+            .....ffffff.....
+            ................
+            .......ff.......
+            ......f55f......
+            .....f5555f.....
+            ....f555555f....
+            ....f555555f....
+            .....ffffff.....
+            ................
+            ................
+            ................
+            ................
+            ................
+            ................
+            ................
+            ................
+            ................
             `, SpriteKind.projectile2)
         mySprite2.setPosition(randint(0, 120), 20)
-        mySprite2.setVelocity(0, 100)
+        mySprite2.setVelocity(0, 50)
         mySprite2.setFlag(SpriteFlag.AutoDestroy, true)
     }
 })
@@ -274,10 +290,10 @@ forever(function () {
             . . . . . . . . 
             . . . . . . . . 
             . . . . . . . . 
-            . . . 5 5 . . . 
-            . . . 5 5 . . . 
-            . . . 5 5 . . . 
-            . . . 5 5 . . . 
+            . . . 9 6 . . . 
+            . . . 7 7 . . . 
+            . . . 7 7 . . . 
+            . . . 7 7 . . . 
             . . . . . . . . 
             `, mySprite, 0, -100)
         music.footstep.play()
@@ -302,29 +318,15 @@ forever(function () {
             . . . . . . . . 
             . . . . . . . . 
             . . . . . . . . 
-            . . . 6 8 . . . 
-            . . . c c . . . 
-            . . . c c . . . 
-            . . . c c . . . 
+            . . . 4 2 . . . 
+            . . . 8 8 . . . 
+            . . . 8 8 . . . 
+            . . . 8 8 . . . 
             . . . . . . . . 
-            `, mySprite, 0, -100)
+            `, mySprite, 0, -1000)
         music.footstep.play()
         snipershots += -1
         pause(1000)
-        if (snipershots <= 0) {
-            projectile = sprites.createProjectileFromSprite(img`
-                . . . . . . . . 
-                . . . . . . . . 
-                . . . . . . . . 
-                . . . 1 1 . . . 
-                . . . 1 1 . . . 
-                . . . 1 1 . . . 
-                . . . 1 1 . . . 
-                . . . . . . . . 
-                `, mySprite, 0, -100)
-            music.pewPew.play()
-            pause(100)
-        }
         if (snipershots <= 0) {
             projectile = sprites.createProjectileFromSprite(img`
                 . . . . . . . . 
