@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.8.23/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"1.2.0","target":"arcade","targetVersion":"1.8.23","repo":"robotplaze/scroller-test"}
-// total=1874205 new=7.87% cached=86.86% other=5.27%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.8.23/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"1.1.0","target":"arcade","targetVersion":"1.8.23","repo":"robotplaze/scroller-test"}
+// total=1866496 new=7.50% cached=87.21% other=5.29%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -546,7 +546,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P40725(s) {
+function _main___P27272(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1123,270 +1123,244 @@ switch (step) {
     s.callLocIdx = 76; s.pc = 53; return s.tmp_0;
   case 53:
     r0 = s.retval;
-    globals.boss___39970 = (r0);
+    globals.boss___26557 = (r0);
     s.tmp_0 = SpriteKind_create__P2258_mk(s);
     s.callLocIdx = 77; s.pc = 54; return s.tmp_0;
   case 54:
     r0 = s.retval;
-    globals.bossprite___39973 = (r0);
+    globals.bossprite___26560 = (r0);
     s.tmp_0 = SpriteKind_create__P2258_mk(s);
     s.callLocIdx = 78; s.pc = 55; return s.tmp_0;
   case 55:
     r0 = s.retval;
-    globals.powerup___39976 = (r0);
+    globals.powerup___26563 = (r0);
     s.tmp_0 = SpriteKind_create__P2258_mk(s);
     s.callLocIdx = 79; s.pc = 56; return s.tmp_0;
   case 56:
     r0 = s.retval;
-    globals.projectile2___39979 = (r0);
-    s.tmp_0 = SpriteKind_create__P2258_mk(s);
+    globals.projectile2___26566 = (r0);
+    s.tmp_0 = StatusBarKind_create__P3988_mk(s);
     s.callLocIdx = 80; s.pc = 57; return s.tmp_0;
   case 57:
     r0 = s.retval;
-    globals.sniperpowerup___39982 = (r0);
-    s.tmp_0 = StatusBarKind_create__P3988_mk(s);
-    s.callLocIdx = 81; s.pc = 58; return s.tmp_0;
-  case 58:
-    r0 = s.retval;
-    globals.Ammo___39985 = (r0);
-    s.tmp_0 = sprites_onOverlap__P2237_mk(s);
-    s.tmp_0.arg0 = globals.Player___2259;
-    s.tmp_0.arg1 = globals.sniperpowerup___39982;
-    s.tmp_0.arg2 = inline__P39990;
-    s.callLocIdx = 83; s.pc = 59; return s.tmp_0;
-  case 59:
-    r0 = s.retval;
+    globals.Ammo___26569 = (r0);
     s.tmp_0 = statusbars_onZero__P4051_mk(s);
     s.tmp_0.arg0 = globals.EnemyHealth___3992;
-    s.tmp_0.arg1 = inline__P40005;
-    s.callLocIdx = 86; s.pc = 60; return s.tmp_0;
-  case 60:
+    s.tmp_0.arg1 = inline__P26573;
+    s.callLocIdx = 83; s.pc = 58; return s.tmp_0;
+  case 58:
     r0 = s.retval;
     s.tmp_0 = statusbars_onZero__P4051_mk(s);
     s.tmp_0.arg0 = globals.Health___3989;
-    s.tmp_0.arg1 = inline__P40017;
-    s.callLocIdx = 92; s.pc = 61; return s.tmp_0;
-  case 61:
+    s.tmp_0.arg1 = inline__P26585;
+    s.callLocIdx = 89; s.pc = 59; return s.tmp_0;
+  case 59:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P2237_mk(s);
     s.tmp_0.arg0 = globals.Player___2259;
-    s.tmp_0.arg1 = globals.projectile2___39979;
-    s.tmp_0.arg2 = inline__P40035;
-    s.callLocIdx = 97; s.pc = 62; return s.tmp_0;
-  case 62:
+    s.tmp_0.arg1 = globals.projectile2___26566;
+    s.tmp_0.arg2 = inline__P26603;
+    s.callLocIdx = 94; s.pc = 60; return s.tmp_0;
+  case 60:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P2237_mk(s);
     s.tmp_0.arg0 = globals.Enemy___2262;
     s.tmp_0.arg1 = globals.Player___2259;
-    s.tmp_0.arg2 = inline__P40056;
-    s.callLocIdx = 102; s.pc = 63; return s.tmp_0;
-  case 63:
+    s.tmp_0.arg2 = inline__P26624;
+    s.callLocIdx = 99; s.pc = 61; return s.tmp_0;
+  case 61:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P2237_mk(s);
     s.tmp_0.arg0 = globals.Player___2259;
-    s.tmp_0.arg1 = globals.powerup___39976;
-    s.tmp_0.arg2 = inline__P40072;
-    s.callLocIdx = 104; s.pc = 64; return s.tmp_0;
-  case 64:
+    s.tmp_0.arg1 = globals.powerup___26563;
+    s.tmp_0.arg2 = inline__P26640;
+    s.callLocIdx = 101; s.pc = 62; return s.tmp_0;
+  case 62:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P2237_mk(s);
     s.tmp_0.arg0 = 1;
     s.tmp_0.arg1 = globals.Enemy___2262;
-    s.tmp_0.arg2 = inline__P40088;
-    s.callLocIdx = 109; s.pc = 65; return s.tmp_0;
-  case 65:
+    s.tmp_0.arg2 = inline__P26656;
+    s.callLocIdx = 106; s.pc = 63; return s.tmp_0;
+  case 63:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P2237_mk(s);
     s.tmp_0.arg0 = 1;
-    s.tmp_0.arg1 = globals.boss___39970;
-    s.tmp_0.arg2 = inline__P40104;
-    s.callLocIdx = 113; s.pc = 66; return s.tmp_0;
-  case 66:
+    s.tmp_0.arg1 = globals.boss___26557;
+    s.tmp_0.arg2 = inline__P26672;
+    s.callLocIdx = 110; s.pc = 64; return s.tmp_0;
+  case 64:
     r0 = s.retval;
-    globals.sniperbullet___40119 = (null);
-    globals.machinegunpowerup___40121 = (null);
-    globals.mySprite3___40123 = (null);
-    globals.mySprite2___40125 = (null);
-    globals.projectile___40127 = (null);
-    globals.counterboss___40129 = (0);
-    globals.Enemy1___40131 = (null);
-    globals.statusbar2___40115 = (null);
-    globals.machinegunammo___40083 = (0);
-    globals.boolean1___40076 = (0);
-    globals.boss1___40011 = (null);
-    globals.snipershots___40001 = (0);
-    globals.boolean2___39994 = (0);
-    globals.statusbar___40047 = (null);
-    globals.mySprite___40023 = (null);
+    globals.machinegunpowerup___26687 = (null);
+    globals.mySprite3___26689 = (null);
+    globals.mySprite2___26691 = (null);
+    globals.projectile___26693 = (null);
+    globals.counterboss___26695 = (0);
+    globals.Enemy1___26697 = (null);
+    globals.statusbar2___26683 = (null);
+    globals.machinegunammo___26651 = (0);
+    globals.boolean1___26644 = (0);
+    globals.boss1___26579 = (null);
+    globals.statusbar___26615 = (null);
+    globals.mySprite___26591 = (null);
     s.tmp_0 = game_showLongText__P2674_mk(s);
     s.tmp_0.arg0 = "Hit A to start!";
     s.tmp_0.arg1 = 0;
-    s.callLocIdx = 114; s.pc = 67; return s.tmp_0;
-  case 67:
+    s.callLocIdx = 111; s.pc = 65; return s.tmp_0;
+  case 65:
     r0 = s.retval;
     s.tmp_0 = music_Melody_loop__P1618_mk(s);
     s.tmp_0.arg0 = globals.knock___1637;
     s.tmp_0.arg1 = 255;
-    s.callLocIdx = 115; s.pc = 68; return s.tmp_0;
-  case 68:
+    s.callLocIdx = 112; s.pc = 66; return s.tmp_0;
+  case 66:
     r0 = s.retval;
     s.tmp_0 = scene_setBackgroundImage__P2612_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex40138);
+    r0 = pxsim.image.ofBuffer(_hex26704);
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 116; s.pc = 69; return s.tmp_0;
-  case 69:
+    s.callLocIdx = 113; s.pc = 67; return s.tmp_0;
+  case 67:
     r0 = s.retval;
     s.tmp_0 = effects_ScreenEffect_startScreenEffect__P2949_mk(s);
     s.tmp_0.arg0 = globals.starField___2967;
     s.tmp_0.arg1 = undefined;
     s.tmp_0.arg2 = undefined;
-    s.callLocIdx = 117; s.pc = 70; return s.tmp_0;
-  case 70:
+    s.callLocIdx = 114; s.pc = 68; return s.tmp_0;
+  case 68:
     r0 = s.retval;
     s.tmp_0 = scroller_scrollBackgroundWithSpeed__P3939_mk(s);
     s.tmp_0.arg0 = 0;
     s.tmp_0.arg1 = 50;
     s.tmp_0.arg2 = 0;
-    s.callLocIdx = 118; s.pc = 71; return s.tmp_0;
-  case 71:
+    s.callLocIdx = 115; s.pc = 69; return s.tmp_0;
+  case 69:
     r0 = s.retval;
     s.tmp_0 = sprites_create__P2064_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex40147);
+    r0 = pxsim.image.ofBuffer(_hex26713);
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = globals.Player___2259;
-    s.callLocIdx = 119; s.pc = 72; return s.tmp_0;
-  case 72:
+    s.callLocIdx = 116; s.pc = 70; return s.tmp_0;
+  case 70:
     r0 = s.retval;
-    globals.mySprite___40023 = (r0);
+    globals.mySprite___26591 = (r0);
     s.tmp_0 = Sprite_setStayInScreen__P2204_mk(s);
-    s.tmp_0.arg0 = globals.mySprite___40023;
+    s.tmp_0.arg0 = globals.mySprite___26591;
     s.tmp_0.arg1 = true;
-    s.callLocIdx = 120; s.pc = 73; return s.tmp_0;
-  case 73:
+    s.callLocIdx = 117; s.pc = 71; return s.tmp_0;
+  case 71:
     r0 = s.retval;
     s.tmp_0 = Sprite_setPosition__P2196_mk(s);
-    s.tmp_0.arg0 = globals.mySprite___40023;
+    s.tmp_0.arg0 = globals.mySprite___26591;
     s.tmp_0.arg1 = 74;
     s.tmp_0.arg2 = 99;
-    s.callLocIdx = 121; s.pc = 74; return s.tmp_0;
-  case 74:
+    s.callLocIdx = 118; s.pc = 72; return s.tmp_0;
+  case 72:
     r0 = s.retval;
     s.tmp_0 = controller_moveSprite__P1957_mk(s);
-    s.tmp_0.arg0 = globals.mySprite___40023;
+    s.tmp_0.arg0 = globals.mySprite___26591;
     s.tmp_0.arg1 = 100;
     s.tmp_0.arg2 = 0;
-    s.callLocIdx = 122; s.pc = 75; return s.tmp_0;
-  case 75:
+    s.callLocIdx = 119; s.pc = 73; return s.tmp_0;
+  case 73:
     r0 = s.retval;
     s.tmp_0 = info_setLife__P2345_mk(s);
     s.tmp_0.arg0 = 3;
-    s.callLocIdx = 123; s.pc = 76; return s.tmp_0;
-  case 76:
+    s.callLocIdx = 120; s.pc = 74; return s.tmp_0;
+  case 74:
     r0 = s.retval;
     s.tmp_0 = info_setScore__P2341_mk(s);
     s.tmp_0.arg0 = 0;
-    s.callLocIdx = 124; s.pc = 77; return s.tmp_0;
-  case 77:
+    s.callLocIdx = 121; s.pc = 75; return s.tmp_0;
+  case 75:
     r0 = s.retval;
     s.tmp_0 = statusbars_create__P4049_mk(s);
     s.tmp_0.arg0 = 20;
     s.tmp_0.arg1 = 4;
     s.tmp_0.arg2 = globals.Health___3989;
-    s.callLocIdx = 125; s.pc = 78; return s.tmp_0;
-  case 78:
+    s.callLocIdx = 122; s.pc = 76; return s.tmp_0;
+  case 76:
     r0 = s.retval;
-    globals.statusbar___40047 = (r0);
+    globals.statusbar___26615 = (r0);
     s.tmp_0 = StatusBarSprite_attachToSprite__P3999_mk(s);
-    s.tmp_0.arg0 = globals.statusbar___40047;
-    s.tmp_0.arg1 = globals.mySprite___40023;
+    s.tmp_0.arg0 = globals.statusbar___26615;
+    s.tmp_0.arg1 = globals.mySprite___26591;
     s.tmp_0.arg2 = 5;
     s.tmp_0.arg3 = 0;
-    s.callLocIdx = 126; s.pc = 79; return s.tmp_0;
-  case 79:
+    s.callLocIdx = 123; s.pc = 77; return s.tmp_0;
+  case 77:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_setColor__P4001_mk(s);
-    s.tmp_0.arg0 = globals.statusbar___40047;
+    s.tmp_0.arg0 = globals.statusbar___26615;
     s.tmp_0.arg1 = 2;
     s.tmp_0.arg2 = 15;
     s.tmp_0.arg3 = undefined;
-    s.callLocIdx = 127; s.pc = 80; return s.tmp_0;
-  case 80:
+    s.callLocIdx = 124; s.pc = 78; return s.tmp_0;
+  case 78:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_setLabel__P4003_mk(s);
-    s.tmp_0.arg0 = globals.statusbar___40047;
+    s.tmp_0.arg0 = globals.statusbar___26615;
     s.tmp_0.arg1 = "HP";
     s.tmp_0.arg2 = 1;
-    s.callLocIdx = 128; s.pc = 81; return s.tmp_0;
-  case 81:
+    s.callLocIdx = 125; s.pc = 79; return s.tmp_0;
+  case 79:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_value__P3996_mk(s);
-    s.tmp_0.arg0 = globals.statusbar___40047;
+    s.tmp_0.arg0 = globals.statusbar___26615;
     s.tmp_0.arg1 = 100;
-    s.callLocIdx = 129; s.pc = 82; return s.tmp_0;
-  case 82:
+    s.callLocIdx = 126; s.pc = 80; return s.tmp_0;
+  case 80:
     r0 = s.retval;
     s.tmp_0 = game_onUpdateInterval__P2705_mk(s);
     s.tmp_0.arg0 = 1000;
-    s.tmp_0.arg1 = inline__P40171;
-    s.callLocIdx = 135; s.pc = 83; return s.tmp_0;
+    s.tmp_0.arg1 = inline__P26737;
+    s.callLocIdx = 132; s.pc = 81; return s.tmp_0;
+  case 81:
+    r0 = s.retval;
+    s.tmp_0 = forever__P1877_mk(s);
+    s.tmp_0.arg0 = inline__P26759;
+    s.callLocIdx = 142; s.pc = 82; return s.tmp_0;
+  case 82:
+    r0 = s.retval;
+    s.tmp_0 = forever__P1877_mk(s);
+    s.tmp_0.arg0 = inline__P26800;
+    s.callLocIdx = 148; s.pc = 83; return s.tmp_0;
   case 83:
     r0 = s.retval;
-    s.tmp_0 = forever__P1877_mk(s);
-    s.tmp_0.arg0 = inline__P40193;
-    s.callLocIdx = 145; s.pc = 84; return s.tmp_0;
+    s.tmp_0 = game_onUpdateInterval__P2705_mk(s);
+    s.tmp_0.arg0 = 500;
+    s.tmp_0.arg1 = inline__P26812;
+    s.callLocIdx = 159; s.pc = 84; return s.tmp_0;
   case 84:
-    r0 = s.retval;
-    s.tmp_0 = forever__P1877_mk(s);
-    s.tmp_0.arg0 = inline__P40234;
-    s.callLocIdx = 155; s.pc = 85; return s.tmp_0;
-  case 85:
-    r0 = s.retval;
-    s.tmp_0 = forever__P1877_mk(s);
-    s.tmp_0.arg0 = inline__P40275;
-    s.callLocIdx = 161; s.pc = 86; return s.tmp_0;
-  case 86:
-    r0 = s.retval;
-    s.tmp_0 = game_onUpdateInterval__P2705_mk(s);
-    s.tmp_0.arg0 = 100;
-    s.tmp_0.arg1 = inline__P40287;
-    s.callLocIdx = 172; s.pc = 87; return s.tmp_0;
-  case 87:
-    r0 = s.retval;
-    s.tmp_0 = game_onUpdateInterval__P2705_mk(s);
-    s.tmp_0.arg0 = 100;
-    s.tmp_0.arg1 = inline__P40319;
-    s.callLocIdx = 177; s.pc = 88; return s.tmp_0;
-  case 88:
     r0 = s.retval;
     s.tmp_0 = game_onUpdateInterval__P2705_mk(s);
     s.tmp_0.arg0 = 200;
-    s.tmp_0.arg1 = inline__P40343;
-    s.callLocIdx = 182; s.pc = 89; return s.tmp_0;
-  case 89:
+    s.tmp_0.arg1 = inline__P26842;
+    s.callLocIdx = 164; s.pc = 85; return s.tmp_0;
+  case 85:
+    r0 = s.retval;
+    s.tmp_0 = game_onUpdateInterval__P2705_mk(s);
+    s.tmp_0.arg0 = 200;
+    s.tmp_0.arg1 = inline__P26867;
+    s.callLocIdx = 169; s.pc = 86; return s.tmp_0;
+  case 86:
     r0 = s.retval;
     s.tmp_0 = game_onUpdateInterval__P2705_mk(s);
     s.tmp_0.arg0 = 10000;
-    s.tmp_0.arg1 = inline__P40371;
-    s.callLocIdx = 187; s.pc = 90; return s.tmp_0;
-  case 90:
-    r0 = s.retval;
-    s.tmp_0 = game_onUpdateInterval__P2705_mk(s);
-    s.tmp_0.arg0 = 10000;
-    s.tmp_0.arg1 = inline__P40387;
-    s.callLocIdx = 192; s.pc = 91; return s.tmp_0;
-  case 91:
+    s.tmp_0.arg1 = inline__P26896;
+    s.callLocIdx = 174; s.pc = 87; return s.tmp_0;
+  case 87:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-_main___P40725.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/Timers/main.ts","functionName":"<main>","argumentNames":[]}
-_main___P40725.continuations = [ 46,47,48,49 ]
+_main___P27272.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/Timers/main.ts","functionName":"<main>","argumentNames":[]}
+_main___P27272.continuations = [ 46,47,48,49 ]
 
-function _main___P40725_mk(s) {
+function _main___P27272_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P40725, depth: s.depth + 1,
+        parent: s, fn: _main___P27272, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1425,8 +1399,8 @@ const _hex6572 = pxsim.BufferMethods.createBufferFromHex("870410000c000000000000
 const _hex6574 = pxsim.BufferMethods.createBufferFromHex("870410000c0000000000000f000000004044ee4d00000000f44f44d40400000040d44fd40d0f0000d04444d4dd0d000040d44f44df040000f44f44f4df00000040444edd4d0000000000d04d4d0000000000e044d40000000000e044ff0000000000e044f400000000e04e44ff0400000040444444fd000000f04f00d00d00000000000000000000")
 const _hex6576 = pxsim.BufferMethods.createBufferFromHex("870410000c0000000000000f000000004044ee4d00000000f44f44d40400000040d44fd40d000000d04444d4dd0d000040d44f444ff40000f44f44f4df00000040444edd4d0000000000d04d4d0000000000e044d40000000000e044ff0000000000e044f400000000e04e44ff0400000040444444fd000000f04f00d00d00000000000000000000")
 const _hex6657 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-const _hex40138 = pxsim.BufferMethods.createBufferFromHex("8704a00078000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff")
-const _hex40147 = pxsim.BufferMethods.createBufferFromHex("87041c001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000cfcc0000000000006fb60000000000008fc80000000000008fc80000000000008fc80000000000008ff80000000000008ff800f0cc0cffff86cfcffcf6cf66869ff86886f8ff88886ff88888f80fffff88cffffff80000008ff800f0ff0000008ff80000000000008fb80000000000008fc80000000000008fc80000000000008fc8000000000000ffff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
+const _hex26704 = pxsim.BufferMethods.createBufferFromHex("8704a00078000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff")
+const _hex26713 = pxsim.BufferMethods.createBufferFromHex("87041c001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000cfcc0000000000006fb60000000000008fc80000000000008fc80000000000008fc80000000000008ff80000000000008ff800f0cc0cffff86cfcffcf6cf66869ff86886f8ff88886ff88888f80fffff88cffffff80000008ff800f0ff0000008ff80000000000008fb80000000000008fc80000000000008fc80000000000008fc8000000000000ffff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
 
 
 
@@ -1831,7 +1805,7 @@ function myTiles_inline__P6661_mk(s) {
 
 
 
-function inline__P39990(s) {
+function inline__P26573(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1843,39 +1817,41 @@ switch (step) {
 
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    globals.boolean2___39994 = (1);
     s.tmp_0 = Sprite_destroy__P2215_mk(s);
-    s.tmp_0.arg0 = s.arg1;
+    s.tmp_0.arg0 = globals.boss1___26579;
     s.tmp_0.arg1 = undefined;
     s.tmp_0.arg2 = undefined;
-    s.callLocIdx = 82; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 81; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    globals.snipershots___40001 = (5);
+    s.tmp_0 = music_Melody_play__P1619_mk(s);
+    s.tmp_0.arg0 = globals.jumpUp___1630;
+    s.tmp_0.arg1 = 255;
+    s.callLocIdx = 82; s.pc = 2; return s.tmp_0;
+  case 2:
+    r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P39990.info = {"start":407,"length":97,"line":10,"column":63,"endLine":14,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P26573.info = {"start":336,"length":65,"line":9,"column":45,"endLine":12,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["status"]}
 
-function inline__P39990_mk(s) {
+function inline__P26573_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P39990, depth: s.depth + 1,
+        parent: s, fn: inline__P26573, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
-  arg1: undefined,
 } }
 
 
 
 
 
-function inline__P40005(s) {
+function inline__P26585(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1890,89 +1866,43 @@ switch (step) {
       s.lambdaArgs = null;
     }
     s.tmp_0 = Sprite_destroy__P2215_mk(s);
-    s.tmp_0.arg0 = globals.boss1___40011;
+    s.tmp_0.arg0 = globals.mySprite___26591;
     s.tmp_0.arg1 = undefined;
     s.tmp_0.arg2 = undefined;
     s.callLocIdx = 84; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = music_Melody_play__P1619_mk(s);
-    s.tmp_0.arg0 = globals.jumpUp___1630;
+    s.tmp_0.arg0 = globals.wawawawaa___1629;
     s.tmp_0.arg1 = 255;
     s.callLocIdx = 85; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-inline__P40005.info = {"start":551,"length":65,"line":15,"column":45,"endLine":18,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["status"]}
-
-function inline__P40005_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: inline__P40005, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  arg0: undefined,
-} }
-
-
-
-
-
-function inline__P40017(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    s.tmp_0 = Sprite_destroy__P2215_mk(s);
-    s.tmp_0.arg0 = globals.mySprite___40023;
-    s.tmp_0.arg1 = undefined;
-    s.tmp_0.arg2 = undefined;
-    s.callLocIdx = 87; s.pc = 1; return s.tmp_0;
-  case 1:
-    r0 = s.retval;
-    s.tmp_0 = music_Melody_play__P1619_mk(s);
-    s.tmp_0.arg0 = globals.wawawawaa___1629;
-    s.tmp_0.arg1 = 255;
-    s.callLocIdx = 88; s.pc = 2; return s.tmp_0;
-  case 2:
-    r0 = s.retval;
     s.tmp_0 = effects_ScreenEffect_endScreenEffect__P2950_mk(s);
     s.tmp_0.arg0 = globals.starField___2967;
-    s.callLocIdx = 89; s.pc = 3; return s.tmp_0;
+    s.callLocIdx = 86; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
     s.tmp_0 = game_over__P2695_mk(s);
     s.tmp_0.arg0 = false;
     s.tmp_0.arg1 = globals.melt___2976;
-    s.callLocIdx = 90; s.pc = 4; return s.tmp_0;
+    s.callLocIdx = 87; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
     s.tmp_0 = music_stopAllSounds__P1611_mk(s);
-    s.callLocIdx = 91; s.pc = 5; return s.tmp_0;
+    s.callLocIdx = 88; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P40017.info = {"start":658,"length":172,"line":19,"column":40,"endLine":25,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["status"]}
+inline__P26585.info = {"start":443,"length":172,"line":13,"column":40,"endLine":19,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["status"]}
 
-function inline__P40017_mk(s) {
+function inline__P26585_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P40017, depth: s.depth + 1,
+        parent: s, fn: inline__P26585, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -1982,7 +1912,7 @@ function inline__P40017_mk(s) {
 
 
 
-function inline__P40035(s) {
+function inline__P26603(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2001,40 +1931,40 @@ switch (step) {
     s.tmp_0.arg0 = s.arg1;
     s.tmp_0.arg1 = undefined;
     s.tmp_0.arg2 = undefined;
-    s.callLocIdx = 93; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 90; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_value__P3996_mk(s);
-    s.tmp_1 = r0 = globals.statusbar___40047;
+    s.tmp_1 = r0 = globals.statusbar___26615;
     s.tmp_0.arg0 = r0;
     s.tmp_3 = StatusBarSprite_value__P3995_mk(s);
     s.tmp_3.arg0 = s.tmp_1;
-    s.callLocIdx = 94; s.pc = 3; return s.tmp_3;
+    s.callLocIdx = 91; s.pc = 3; return s.tmp_3;
   case 3:
     r0 = s.retval;
     s.tmp_2 = r0;
     r0 = (s.tmp_2 + -10);
     s.tmp_0.arg1 = r0;
-    s.callLocIdx = 95; s.pc = 2; return s.tmp_0;
+    s.callLocIdx = 92; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     s.tmp_0 = Sprite_startEffect__P2200_mk(s);
     s.tmp_0.arg0 = s.arg1;
     s.tmp_0.arg1 = globals.halo___2962;
     s.tmp_0.arg2 = 5000;
-    s.callLocIdx = 96; s.pc = 4; return s.tmp_0;
+    s.callLocIdx = 93; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P40035.info = {"start":893,"length":135,"line":26,"column":61,"endLine":30,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P26603.info = {"start":678,"length":135,"line":20,"column":61,"endLine":24,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P40035_mk(s) {
+function inline__P26603_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P40035, depth: s.depth + 1,
+        parent: s, fn: inline__P26603, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2048,7 +1978,7 @@ function inline__P40035_mk(s) {
 
 
 
-function inline__P40056(s) {
+function inline__P26624(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2067,38 +1997,38 @@ switch (step) {
     s.tmp_0.arg0 = s.arg1;
     s.tmp_0.arg1 = globals.fire___2959;
     s.tmp_0.arg2 = 100;
-    s.callLocIdx = 98; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 95; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_value__P3996_mk(s);
-    s.tmp_1 = r0 = globals.statusbar___40047;
+    s.tmp_1 = r0 = globals.statusbar___26615;
     s.tmp_0.arg0 = r0;
     s.tmp_3 = StatusBarSprite_value__P3995_mk(s);
     s.tmp_3.arg0 = s.tmp_1;
-    s.callLocIdx = 99; s.pc = 3; return s.tmp_3;
+    s.callLocIdx = 96; s.pc = 3; return s.tmp_3;
   case 3:
     r0 = s.retval;
     s.tmp_2 = r0;
     r0 = (s.tmp_2 + -10);
     s.tmp_0.arg1 = r0;
-    s.callLocIdx = 100; s.pc = 2; return s.tmp_0;
+    s.callLocIdx = 97; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     s.tmp_0 = info_changeScoreBy__P2342_mk(s);
     s.tmp_0.arg0 = 1;
-    s.callLocIdx = 101; s.pc = 4; return s.tmp_0;
+    s.callLocIdx = 98; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P40056.info = {"start":1085,"length":134,"line":31,"column":55,"endLine":35,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P26624.info = {"start":870,"length":134,"line":25,"column":55,"endLine":29,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P40056_mk(s) {
+function inline__P26624_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P40056, depth: s.depth + 1,
+        parent: s, fn: inline__P26624, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2112,7 +2042,7 @@ function inline__P40056_mk(s) {
 
 
 
-function inline__P40072(s) {
+function inline__P26640(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2127,25 +2057,25 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    globals.boolean1___40076 = (1);
+    globals.boolean1___26644 = (1);
     s.tmp_0 = Sprite_destroy__P2215_mk(s);
     s.tmp_0.arg0 = s.arg1;
     s.tmp_0.arg1 = undefined;
     s.tmp_0.arg2 = undefined;
-    s.callLocIdx = 103; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 100; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    globals.machinegunammo___40083 = (50);
+    globals.machinegunammo___26651 = (50);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P40072.info = {"start":1278,"length":101,"line":36,"column":57,"endLine":40,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P26640.info = {"start":1063,"length":101,"line":30,"column":57,"endLine":34,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P40072_mk(s) {
+function inline__P26640_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P40072, depth: s.depth + 1,
+        parent: s, fn: inline__P26640, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -2156,7 +2086,7 @@ function inline__P40072_mk(s) {
 
 
 
-function inline__P40088(s) {
+function inline__P26656(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2175,37 +2105,37 @@ switch (step) {
     s.tmp_0.arg0 = s.arg1;
     s.tmp_0.arg1 = globals.fire___2959;
     s.tmp_0.arg2 = 100;
-    s.callLocIdx = 105; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 102; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = Sprite_destroy__P2215_mk(s);
     s.tmp_0.arg0 = s.arg1;
     s.tmp_0.arg1 = undefined;
     s.tmp_0.arg2 = undefined;
-    s.callLocIdx = 106; s.pc = 2; return s.tmp_0;
+    s.callLocIdx = 103; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     s.tmp_0 = music_Melody_play__P1619_mk(s);
     s.tmp_0.arg0 = globals.powerUp___1632;
     s.tmp_0.arg1 = 255;
-    s.callLocIdx = 107; s.pc = 3; return s.tmp_0;
+    s.callLocIdx = 104; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
     s.tmp_0 = info_changeScoreBy__P2342_mk(s);
     s.tmp_0.arg0 = 1;
-    s.callLocIdx = 108; s.pc = 4; return s.tmp_0;
+    s.callLocIdx = 105; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P40088.info = {"start":1440,"length":162,"line":41,"column":59,"endLine":46,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite3","otherSprite3"]}
+inline__P26656.info = {"start":1225,"length":162,"line":35,"column":59,"endLine":40,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite3","otherSprite3"]}
 
-function inline__P40088_mk(s) {
+function inline__P26656_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P40088, depth: s.depth + 1,
+        parent: s, fn: inline__P26656, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -2216,7 +2146,7 @@ function inline__P40088_mk(s) {
 
 
 
-function inline__P40104(s) {
+function inline__P26672(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2235,33 +2165,33 @@ switch (step) {
     s.tmp_0.arg0 = s.arg1;
     s.tmp_0.arg1 = globals.fire___2959;
     s.tmp_0.arg2 = 100;
-    s.callLocIdx = 110; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 107; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_value__P3996_mk(s);
-    s.tmp_1 = r0 = globals.statusbar2___40115;
+    s.tmp_1 = r0 = globals.statusbar2___26683;
     s.tmp_0.arg0 = r0;
     s.tmp_3 = StatusBarSprite_value__P3995_mk(s);
     s.tmp_3.arg0 = s.tmp_1;
-    s.callLocIdx = 111; s.pc = 3; return s.tmp_3;
+    s.callLocIdx = 108; s.pc = 3; return s.tmp_3;
   case 3:
     r0 = s.retval;
     s.tmp_2 = r0;
     r0 = (s.tmp_2 + -1);
     s.tmp_0.arg1 = r0;
-    s.callLocIdx = 112; s.pc = 2; return s.tmp_0;
+    s.callLocIdx = 109; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P40104.info = {"start":1662,"length":111,"line":47,"column":58,"endLine":50,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite2","otherSprite2"]}
+inline__P26672.info = {"start":1447,"length":111,"line":41,"column":58,"endLine":44,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite2","otherSprite2"]}
 
-function inline__P40104_mk(s) {
+function inline__P26672_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P40104, depth: s.depth + 1,
+        parent: s, fn: inline__P26672, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2275,7 +2205,7 @@ function inline__P40104_mk(s) {
 
 
 
-function inline__P40171(s) {
+function inline__P26737(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2286,62 +2216,62 @@ switch (step) {
   case 0:
 
     s.tmp_0 = sprites_create__P2064_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex40175);
+    r0 = pxsim.image.ofBuffer(_hex26741);
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = globals.Enemy___2262;
-    s.callLocIdx = 130; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 127; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    globals.Enemy1___40131 = (r0);
+    globals.Enemy1___26697 = (r0);
     s.tmp_0 = Sprite_setVelocity__P2197_mk(s);
-    s.tmp_0.arg0 = globals.Enemy1___40131;
+    s.tmp_0.arg0 = globals.Enemy1___26697;
     s.tmp_0.arg1 = 0;
     s.tmp_0.arg2 = 50;
-    s.callLocIdx = 131; s.pc = 2; return s.tmp_0;
+    s.callLocIdx = 128; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     s.tmp_0 = Sprite_setFlag__P2206_mk(s);
-    s.tmp_0.arg0 = globals.Enemy1___40131;
+    s.tmp_0.arg0 = globals.Enemy1___26697;
     s.tmp_0.arg1 = 4;
     s.tmp_0.arg2 = true;
-    s.callLocIdx = 132; s.pc = 3; return s.tmp_0;
+    s.callLocIdx = 129; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
     s.tmp_0 = Sprite_x__P2142_mk(s);
-    s.tmp_0.arg0 = globals.Enemy1___40131;
+    s.tmp_0.arg0 = globals.Enemy1___26697;
     r0 = pxsim.Math_.randomRange(0, 150);
     s.tmp_0.arg1 = r0;
-    s.callLocIdx = 133; s.pc = 4; return s.tmp_0;
+    s.callLocIdx = 130; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
     s.tmp_0 = Sprite_y__P2144_mk(s);
-    s.tmp_0.arg0 = globals.Enemy1___40131;
+    s.tmp_0.arg0 = globals.Enemy1___26697;
     s.tmp_0.arg1 = 0;
-    s.callLocIdx = 134; s.pc = 5; return s.tmp_0;
+    s.callLocIdx = 131; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    r0 = (globals.counterboss___40129 + 1);
-    globals.counterboss___40129 = (r0);
+    r0 = (globals.counterboss___26695 + 1);
+    globals.counterboss___26695 = (r0);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P40171.info = {"start":23101,"length":817,"line":220,"column":28,"endLine":244,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P26737.info = {"start":22817,"length":817,"line":211,"column":28,"endLine":235,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P40171_mk(s) {
+function inline__P26737_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P40171, depth: s.depth + 1,
+        parent: s, fn: inline__P26737, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
 
-const _hex40175 = pxsim.BufferMethods.createBufferFromHex("87041c001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffff0000000000002cf20000000000002cf20000000000002cf20000000000002bf20000000000002ff2000000ff0f002ff20000002ffffffc22fffff02f22222ff42222ff2f42242ff34244fc4fcffcfc42ffffc0cc0f002ff20000000000002ff20000000000002cf20000000000002cf20000000000002cf20000000000004bf4000000000000ccfc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
+const _hex26741 = pxsim.BufferMethods.createBufferFromHex("87041c001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffff0000000000002cf20000000000002cf20000000000002cf20000000000002bf20000000000002ff2000000ff0f002ff20000002ffffffc22fffff02f22222ff42222ff2f42242ff34244fc4fcffcfc42ffffc0cc0f002ff20000000000002ff20000000000002cf20000000000002cf20000000000002cf20000000000004bf4000000000000ccfc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
 
 
 
 
-function inline__P40193(s) {
+function inline__P26759(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2351,166 +2281,56 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = (globals.boolean2___39994 == 1);
+    r0 = (globals.boolean1___26644 == 1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
     s.tmp_1 = sprites_createProjectileFromSprite__P2069_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex40199);
+    r0 = pxsim.image.ofBuffer(_hex26765);
     s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = globals.mySprite___40023;
+    s.tmp_1.arg1 = globals.mySprite___26591;
     s.tmp_1.arg2 = 0;
     s.tmp_1.arg3 = -100;
-    s.callLocIdx = 136; s.pc = 5; return s.tmp_1;
+    s.callLocIdx = 133; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
-    globals.projectile___40127 = (r0);
+    globals.projectile___26693 = (r0);
     s.tmp_0 = music_Melody_play__P1619_mk(s);
     s.tmp_0.arg0 = globals.footstep___1638;
     s.tmp_0.arg1 = 255;
-    s.callLocIdx = 137; s.pc = 6; return s.tmp_0;
+    s.callLocIdx = 134; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
-    r0 = (globals.snipershots___40001 + -1);
-    globals.snipershots___40001 = (r0);
-    s.tmp_0 = pause__P413_mk(s);
-    s.tmp_0.arg0 = 1000;
-    s.callLocIdx = 138; s.pc = 7; return s.tmp_0;
-  case 7:
-    r0 = s.retval;
-    r0 = (globals.snipershots___40001 <= 0);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    s.tmp_1 = sprites_createProjectileFromSprite__P2069_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex40216);
-    s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = globals.mySprite___40023;
-    s.tmp_1.arg2 = 0;
-    s.tmp_1.arg3 = -100;
-    s.callLocIdx = 139; s.pc = 8; return s.tmp_1;
-  case 8:
-    r0 = s.retval;
-    globals.projectile___40127 = (r0);
-    s.tmp_0 = music_Melody_play__P1619_mk(s);
-    s.tmp_0.arg0 = globals.pewPew___1636;
-    s.tmp_0.arg1 = 255;
-    s.callLocIdx = 140; s.pc = 9; return s.tmp_0;
-  case 9:
-    r0 = s.retval;
-    s.tmp_0 = pause__P413_mk(s);
-    s.tmp_0.arg0 = 100;
-    s.callLocIdx = 141; s.pc = 10; return s.tmp_0;
-  case 10:
-    r0 = s.retval;
-  case 1:
-  case 2:
-    { step = 4; continue; }
-  case 3:
-    s.tmp_0 = sprites_createProjectileFromSprite__P2069_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex40226);
-    s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = globals.mySprite___40023;
-    s.tmp_0.arg2 = 0;
-    s.tmp_0.arg3 = -100;
-    s.callLocIdx = 142; s.pc = 11; return s.tmp_0;
-  case 11:
-    r0 = s.retval;
-    globals.projectile___40127 = (r0);
-    s.tmp_0 = music_Melody_play__P1619_mk(s);
-    s.tmp_0.arg0 = globals.pewPew___1636;
-    s.tmp_0.arg1 = 255;
-    s.callLocIdx = 143; s.pc = 12; return s.tmp_0;
-  case 12:
-    r0 = s.retval;
-    s.tmp_0 = pause__P413_mk(s);
-    s.tmp_0.arg0 = 100;
-    s.callLocIdx = 144; s.pc = 13; return s.tmp_0;
-  case 13:
-    r0 = s.retval;
-  case 4:
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-inline__P40193.info = {"start":23928,"length":1300,"line":245,"column":8,"endLine":288,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
-
-function inline__P40193_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: inline__P40193, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-} }
-
-const _hex40199 = pxsim.BufferMethods.createBufferFromHex("87040800080000000000000000000000000000000060cc0c0080cc0c000000000000000000000000")
-const _hex40216 = pxsim.BufferMethods.createBufferFromHex("87040800080000000000000000000000000000000010110100101101000000000000000000000000")
-const _hex40226 = pxsim.BufferMethods.createBufferFromHex("87040800080000000000000000000000000000000010110100101101000000000000000000000000")
-
-
-
-
-function inline__P40234(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    r0 = (globals.boolean1___40076 == 1);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 3; continue; }
-    s.tmp_1 = sprites_createProjectileFromSprite__P2069_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex40240);
-    s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = globals.mySprite___40023;
-    s.tmp_1.arg2 = 0;
-    s.tmp_1.arg3 = -100;
-    s.callLocIdx = 146; s.pc = 5; return s.tmp_1;
-  case 5:
-    r0 = s.retval;
-    globals.projectile___40127 = (r0);
-    s.tmp_0 = music_Melody_play__P1619_mk(s);
-    s.tmp_0.arg0 = globals.footstep___1638;
-    s.tmp_0.arg1 = 255;
-    s.callLocIdx = 147; s.pc = 6; return s.tmp_0;
-  case 6:
-    r0 = s.retval;
-    r0 = (globals.machinegunammo___40083 + -1);
-    globals.machinegunammo___40083 = (r0);
+    r0 = (globals.machinegunammo___26651 + -1);
+    globals.machinegunammo___26651 = (r0);
     s.tmp_0 = pause__P413_mk(s);
     s.tmp_0.arg0 = 10;
-    s.callLocIdx = 148; s.pc = 7; return s.tmp_0;
+    s.callLocIdx = 135; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
-    r0 = (globals.machinegunammo___40083 <= 0);
+    r0 = (globals.machinegunammo___26651 <= 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
     s.tmp_1 = sprites_createProjectileFromSprite__P2069_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex40257);
+    r0 = pxsim.image.ofBuffer(_hex26782);
     s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = globals.mySprite___40023;
+    s.tmp_1.arg1 = globals.mySprite___26591;
     s.tmp_1.arg2 = 0;
     s.tmp_1.arg3 = -100;
-    s.callLocIdx = 149; s.pc = 8; return s.tmp_1;
+    s.callLocIdx = 136; s.pc = 8; return s.tmp_1;
   case 8:
     r0 = s.retval;
-    globals.projectile___40127 = (r0);
+    globals.projectile___26693 = (r0);
     s.tmp_0 = music_Melody_play__P1619_mk(s);
     s.tmp_0.arg0 = globals.pewPew___1636;
     s.tmp_0.arg1 = 255;
-    s.callLocIdx = 150; s.pc = 9; return s.tmp_0;
+    s.callLocIdx = 137; s.pc = 9; return s.tmp_0;
   case 9:
     r0 = s.retval;
     s.tmp_0 = pause__P413_mk(s);
     s.tmp_0.arg0 = 100;
-    s.callLocIdx = 151; s.pc = 10; return s.tmp_0;
+    s.callLocIdx = 138; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
   case 1:
@@ -2518,24 +2338,24 @@ switch (step) {
     { step = 4; continue; }
   case 3:
     s.tmp_0 = sprites_createProjectileFromSprite__P2069_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex40267);
+    r0 = pxsim.image.ofBuffer(_hex26792);
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = globals.mySprite___40023;
+    s.tmp_0.arg1 = globals.mySprite___26591;
     s.tmp_0.arg2 = 0;
     s.tmp_0.arg3 = -100;
-    s.callLocIdx = 152; s.pc = 11; return s.tmp_0;
+    s.callLocIdx = 139; s.pc = 11; return s.tmp_0;
   case 11:
     r0 = s.retval;
-    globals.projectile___40127 = (r0);
+    globals.projectile___26693 = (r0);
     s.tmp_0 = music_Melody_play__P1619_mk(s);
     s.tmp_0.arg0 = globals.pewPew___1636;
     s.tmp_0.arg1 = 255;
-    s.callLocIdx = 153; s.pc = 12; return s.tmp_0;
+    s.callLocIdx = 140; s.pc = 12; return s.tmp_0;
   case 12:
     r0 = s.retval;
     s.tmp_0 = pause__P413_mk(s);
     s.tmp_0.arg0 = 100;
-    s.callLocIdx = 154; s.pc = 13; return s.tmp_0;
+    s.callLocIdx = 141; s.pc = 13; return s.tmp_0;
   case 13:
     r0 = s.retval;
   case 4:
@@ -2543,25 +2363,25 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P40234.info = {"start":25238,"length":1304,"line":289,"column":8,"endLine":332,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P26759.info = {"start":23644,"length":1304,"line":236,"column":8,"endLine":279,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P40234_mk(s) {
+function inline__P26759_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P40234, depth: s.depth + 1,
+        parent: s, fn: inline__P26759, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
 } }
 
-const _hex40240 = pxsim.BufferMethods.createBufferFromHex("87040800080000000000000000000000000000000050550500505505000000000000000000000000")
-const _hex40257 = pxsim.BufferMethods.createBufferFromHex("87040800080000000000000000000000000000000010110100101101000000000000000000000000")
-const _hex40267 = pxsim.BufferMethods.createBufferFromHex("87040800080000000000000000000000000000000010110100101101000000000000000000000000")
+const _hex26765 = pxsim.BufferMethods.createBufferFromHex("87040800080000000000000000000000000000000050550500505505000000000000000000000000")
+const _hex26782 = pxsim.BufferMethods.createBufferFromHex("87040800080000000000000000000000000000000010110100101101000000000000000000000000")
+const _hex26792 = pxsim.BufferMethods.createBufferFromHex("87040800080000000000000000000000000000000010110100101101000000000000000000000000")
 
 
 
 
-function inline__P40275(s) {
+function inline__P26800(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2572,7 +2392,7 @@ switch (step) {
   case 0:
 
     s.tmp_2 = info_score__P2338_mk(s);
-    s.callLocIdx = 156; s.pc = 3; return s.tmp_2;
+    s.callLocIdx = 143; s.pc = 3; return s.tmp_2;
   case 3:
     r0 = s.retval;
     s.tmp_1 = r0;
@@ -2583,23 +2403,23 @@ switch (step) {
     s.tmp_3 = game_over__P2695_mk(s);
     s.tmp_3.arg0 = true;
     s.tmp_3.arg1 = globals.confetti___2955;
-    s.callLocIdx = 157; s.pc = 4; return s.tmp_3;
+    s.callLocIdx = 144; s.pc = 4; return s.tmp_3;
   case 4:
     r0 = s.retval;
     s.tmp_0 = game_showLongText__P2674_mk(s);
     s.tmp_0.arg0 = "You did it!!!";
     s.tmp_0.arg1 = 0;
-    s.callLocIdx = 158; s.pc = 5; return s.tmp_0;
+    s.callLocIdx = 145; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
     s.tmp_0 = music_Melody_play__P1619_mk(s);
     s.tmp_0.arg0 = globals.powerUp___1632;
     s.tmp_0.arg1 = 255;
-    s.callLocIdx = 159; s.pc = 6; return s.tmp_0;
+    s.callLocIdx = 146; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
     s.tmp_0 = music_stopAllSounds__P1611_mk(s);
-    s.callLocIdx = 160; s.pc = 7; return s.tmp_0;
+    s.callLocIdx = 147; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
   case 1:
@@ -2608,12 +2428,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P40275.info = {"start":26552,"length":217,"line":333,"column":8,"endLine":340,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P26800.info = {"start":24958,"length":217,"line":280,"column":8,"endLine":287,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P40275_mk(s) {
+function inline__P26800_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P40275, depth: s.depth + 1,
+        parent: s, fn: inline__P26800, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2625,7 +2445,7 @@ function inline__P40275_mk(s) {
 
 
 
-function inline__P40287(s) {
+function inline__P26812(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2635,92 +2455,90 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = (globals.counterboss___40129 == 20);
+    r0 = (globals.counterboss___26695 == 20);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
     s.tmp_1 = sprites_create__P2064_mk(s);
     s.tmp_2 = helpers_getImageByName__P3015_mk(s);
     s.tmp_2.arg0 = "Boss";
-    s.callLocIdx = 162; s.pc = 4; return s.tmp_2;
+    s.callLocIdx = 149; s.pc = 4; return s.tmp_2;
   case 4:
     r0 = s.retval;
     s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = globals.boss___39970;
-    s.callLocIdx = 163; s.pc = 3; return s.tmp_1;
+    s.tmp_1.arg1 = globals.boss___26557;
+    s.callLocIdx = 150; s.pc = 3; return s.tmp_1;
   case 3:
     r0 = s.retval;
-    globals.boss1___40011 = (r0);
+    globals.boss1___26579 = (r0);
     s.tmp_0 = statusbars_create__P4049_mk(s);
     s.tmp_0.arg0 = 40;
     s.tmp_0.arg1 = 2;
     s.tmp_0.arg2 = globals.EnemyHealth___3992;
-    s.callLocIdx = 164; s.pc = 5; return s.tmp_0;
+    s.callLocIdx = 151; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    globals.statusbar2___40115 = (r0);
+    globals.statusbar2___26683 = (r0);
     s.tmp_0 = StatusBarSprite_setLabel__P4003_mk(s);
-    s.tmp_0.arg0 = globals.statusbar2___40115;
+    s.tmp_0.arg0 = globals.statusbar2___26683;
     s.tmp_0.arg1 = "BOSS:";
     s.tmp_0.arg2 = undefined;
-    s.callLocIdx = 165; s.pc = 6; return s.tmp_0;
+    s.callLocIdx = 152; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
     s.tmp_0 = Sprite_setPosition__P2196_mk(s);
-    s.tmp_0.arg0 = globals.statusbar2___40115;
+    s.tmp_0.arg0 = globals.statusbar2___26683;
     s.tmp_0.arg1 = 72;
     s.tmp_0.arg2 = 6;
-    s.callLocIdx = 166; s.pc = 7; return s.tmp_0;
+    s.callLocIdx = 153; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
     s.tmp_0 = StatusBarSprite_max__P3998_mk(s);
-    s.tmp_0.arg0 = globals.statusbar___40047;
+    s.tmp_0.arg0 = globals.statusbar___26615;
     s.tmp_0.arg1 = 10;
-    s.callLocIdx = 167; s.pc = 8; return s.tmp_0;
+    s.callLocIdx = 154; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
     s.tmp_0 = Sprite_setPosition__P2196_mk(s);
-    s.tmp_0.arg0 = globals.boss1___40011;
+    s.tmp_0.arg0 = globals.boss1___26579;
     r0 = pxsim.Math_.randomRange(0, 100);
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 25;
-    s.callLocIdx = 168; s.pc = 9; return s.tmp_0;
+    s.callLocIdx = 155; s.pc = 9; return s.tmp_0;
   case 9:
     r0 = s.retval;
     s.tmp_0 = Sprite_setBounceOnWall__P2205_mk(s);
-    s.tmp_0.arg0 = globals.boss1___40011;
+    s.tmp_0.arg0 = globals.boss1___26579;
     s.tmp_0.arg1 = true;
-    s.callLocIdx = 169; s.pc = 10; return s.tmp_0;
+    s.callLocIdx = 156; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
     s.tmp_0 = Sprite_setVelocity__P2197_mk(s);
-    s.tmp_0.arg0 = globals.boss1___40011;
+    s.tmp_0.arg0 = globals.boss1___26579;
     s.tmp_0.arg1 = 50;
     s.tmp_0.arg2 = 50;
-    s.callLocIdx = 170; s.pc = 11; return s.tmp_0;
+    s.callLocIdx = 157; s.pc = 11; return s.tmp_0;
   case 11:
     r0 = s.retval;
     s.tmp_0 = music_Melody_play__P1619_mk(s);
     s.tmp_0.arg0 = globals.siren___1635;
     s.tmp_0.arg1 = 255;
-    s.callLocIdx = 171; s.pc = 12; return s.tmp_0;
+    s.callLocIdx = 158; s.pc = 12; return s.tmp_0;
   case 12:
     r0 = s.retval;
-    globals.counterboss___40129 = (0);
-    { step = 2; continue; }
+    globals.counterboss___26695 = (0);
   case 1:
-    globals.counterboss___40129 = (globals.counterboss___40129);
   case 2:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P40287.info = {"start":26798,"length":508,"line":341,"column":27,"endLine":356,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P26812.info = {"start":25204,"length":461,"line":288,"column":27,"endLine":301,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P40287_mk(s) {
+function inline__P26812_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P40287, depth: s.depth + 1,
+        parent: s, fn: inline__P26812, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2731,7 +2549,7 @@ function inline__P40287_mk(s) {
 
 
 
-function inline__P40319(s) {
+function inline__P26842(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2741,75 +2559,76 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.index___40322 = undefined;
-    r0 = (globals.counterboss___40129 == 20);
+    s.index___26845 = undefined;
+    r0 = (globals.counterboss___26695 == 20);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    s.index___40322 = (0);
+    s.index___26845 = (0);
   case 1:
-    r0 = (s.index___40322 < 5);
+    r0 = (s.index___26845 < 5);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 2; continue; }
     s.tmp_1 = sprites_create__P2064_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex40329);
+    r0 = pxsim.image.ofBuffer(_hex26852);
     s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = globals.projectile2___39979;
-    s.callLocIdx = 173; s.pc = 5; return s.tmp_1;
+    s.tmp_1.arg1 = globals.projectile2___26566;
+    s.callLocIdx = 160; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
-    globals.mySprite2___40125 = (r0);
+    globals.mySprite2___26691 = (r0);
     s.tmp_0 = Sprite_setPosition__P2196_mk(s);
-    s.tmp_0.arg0 = globals.mySprite2___40125;
+    s.tmp_0.arg0 = globals.mySprite2___26691;
     r0 = pxsim.Math_.randomRange(0, 120);
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 20;
-    s.callLocIdx = 174; s.pc = 6; return s.tmp_0;
+    s.callLocIdx = 161; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
     s.tmp_0 = Sprite_setVelocity__P2197_mk(s);
-    s.tmp_0.arg0 = globals.mySprite2___40125;
+    s.tmp_0.arg0 = globals.mySprite2___26691;
     s.tmp_0.arg1 = 0;
     s.tmp_0.arg2 = 100;
-    s.callLocIdx = 175; s.pc = 7; return s.tmp_0;
+    s.callLocIdx = 162; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
     s.tmp_0 = Sprite_setFlag__P2206_mk(s);
-    s.tmp_0.arg0 = globals.mySprite2___40125;
+    s.tmp_0.arg0 = globals.mySprite2___26691;
     s.tmp_0.arg1 = 4;
     s.tmp_0.arg2 = true;
-    s.callLocIdx = 176; s.pc = 8; return s.tmp_0;
+    s.callLocIdx = 163; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
-    r0 = (s.index___40322 + 1);
-    s.index___40322 = (r0);
+    r0 = (s.index___26845 + 1);
+    s.index___26845 = (r0);
     { step = 1; continue; }
   case 2:
+    globals.counterboss___26695 = (0);
   case 3:
   case 4:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P40319.info = {"start":27335,"length":1138,"line":357,"column":27,"endLine":383,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P26842.info = {"start":25694,"length":1162,"line":302,"column":27,"endLine":329,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P40319_mk(s) {
+function inline__P26842_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P40319, depth: s.depth + 1,
+        parent: s, fn: inline__P26842, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  index___40322: undefined,
+  index___26845: undefined,
 } }
 
-const _hex40329 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000f00f000000000000f0ffffffff0f0000f0cfccccfcf40f0000ffcccccc2ff20f00f0cfccccfc22f2f0ffcfcccccc2ff2f0cccfcccccc2ff2f0cccfcccccc2ff2f0ffcfcccccc2ff200f0cfccccfc22f200ffcccccc2ff20ff0cfccccfcf40f00f0ffffffff0f0000f00f0000000000000000000000000000")
+const _hex26852 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000f00f000000000000f0ffffffff0f0000f0cfccccfcf40f0000ffcccccc2ff20f00f0cfccccfc22f2f0ffcfcccccc2ff2f0cccfcccccc2ff2f0cccfcccccc2ff2f0ffcfcccccc2ff200f0cfccccfc22f200ffcccccc2ff20ff0cfccccfcf40f00f0ffffffff0f0000f00f0000000000000000000000000000")
 
 
 
 
-function inline__P40343(s) {
+function inline__P26867(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2819,77 +2638,78 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.index___40346 = undefined;
-    r0 = (globals.counterboss___40129 == 20);
+    s.index___26870 = undefined;
+    r0 = (globals.counterboss___26695 == 20);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    s.index___40346 = (0);
+    s.index___26870 = (0);
   case 1:
-    r0 = (s.index___40346 < 5);
+    r0 = (s.index___26870 < 5);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 2; continue; }
     s.tmp_1 = sprites_create__P2064_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex40353);
+    r0 = pxsim.image.ofBuffer(_hex26877);
     s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = globals.projectile2___39979;
-    s.callLocIdx = 178; s.pc = 5; return s.tmp_1;
+    s.tmp_1.arg1 = globals.projectile2___26566;
+    s.callLocIdx = 165; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
-    globals.mySprite3___40123 = (r0);
+    globals.mySprite3___26689 = (r0);
     s.tmp_0 = Sprite_setPosition__P2196_mk(s);
-    s.tmp_0.arg0 = globals.mySprite3___40123;
+    s.tmp_0.arg0 = globals.mySprite3___26689;
     r0 = pxsim.Math_.randomRange(0, 120);
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 20;
-    s.callLocIdx = 179; s.pc = 6; return s.tmp_0;
+    s.callLocIdx = 166; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
     s.tmp_0 = Sprite_setVelocity__P2197_mk(s);
-    s.tmp_0.arg0 = globals.mySprite3___40123;
+    s.tmp_0.arg0 = globals.mySprite3___26689;
     r0 = pxsim.Math_.randomRange(0, 50);
     s.tmp_0.arg1 = r0;
     r0 = pxsim.Math_.randomRange(0, 50);
     s.tmp_0.arg2 = r0;
-    s.callLocIdx = 180; s.pc = 7; return s.tmp_0;
+    s.callLocIdx = 167; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
     s.tmp_0 = Sprite_setFlag__P2206_mk(s);
-    s.tmp_0.arg0 = globals.mySprite3___40123;
+    s.tmp_0.arg0 = globals.mySprite3___26689;
     s.tmp_0.arg1 = 4;
     s.tmp_0.arg2 = true;
-    s.callLocIdx = 181; s.pc = 8; return s.tmp_0;
+    s.callLocIdx = 168; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
-    r0 = (s.index___40346 + 1);
-    s.index___40346 = (r0);
+    r0 = (s.index___26870 + 1);
+    s.index___26870 = (r0);
     { step = 1; continue; }
   case 2:
+    globals.counterboss___26695 = (0);
   case 3:
   case 4:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P40343.info = {"start":28502,"length":1162,"line":384,"column":27,"endLine":410,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P26867.info = {"start":26885,"length":1186,"line":330,"column":27,"endLine":357,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P40343_mk(s) {
+function inline__P26867_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P40343, depth: s.depth + 1,
+        parent: s, fn: inline__P26867, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  index___40346: undefined,
+  index___26870: undefined,
 } }
 
-const _hex40353 = pxsim.BufferMethods.createBufferFromHex("8704100010000000000000ffff0000000000002ff2000000000000ffff000000000000f00f000000000000f00f000000000000f00f000000ff0f00f00f00f0ff2fffff2ff2fffff22fffff2ff2fffff2ff0f00f00f00f0ff000000f00f000000000000f00f000000000000f00f000000000000ffff0000000000002ff2000000000000ffff000000")
+const _hex26877 = pxsim.BufferMethods.createBufferFromHex("8704100010000000000000ffff0000000000002ff2000000000000ffff000000000000f00f000000000000f00f000000000000f00f000000ff0f00f00f00f0ff2fffff2ff2fffff22fffff2ff2fffff2ff0f00f00f00f0ff000000f00f000000000000f00f000000000000f00f000000000000ffff0000000000002ff2000000000000ffff000000")
 
 
 
 
-function inline__P40371(s) {
+function inline__P26896(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2900,109 +2720,50 @@ switch (step) {
   case 0:
 
     s.tmp_0 = sprites_create__P2064_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex40375);
+    r0 = pxsim.image.ofBuffer(_hex26900);
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = globals.powerup___39976;
-    s.callLocIdx = 183; s.pc = 1; return s.tmp_0;
+    s.tmp_0.arg1 = globals.powerup___26563;
+    s.callLocIdx = 170; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    globals.machinegunpowerup___40121 = (r0);
+    globals.machinegunpowerup___26687 = (r0);
     s.tmp_0 = Sprite_setPosition__P2196_mk(s);
-    s.tmp_0.arg0 = globals.machinegunpowerup___40121;
+    s.tmp_0.arg0 = globals.machinegunpowerup___26687;
     r0 = pxsim.Math_.randomRange(0, 150);
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 0;
-    s.callLocIdx = 184; s.pc = 2; return s.tmp_0;
+    s.callLocIdx = 171; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     s.tmp_0 = Sprite_setVelocity__P2197_mk(s);
-    s.tmp_0.arg0 = globals.machinegunpowerup___40121;
+    s.tmp_0.arg0 = globals.machinegunpowerup___26687;
     s.tmp_0.arg1 = 0;
     s.tmp_0.arg2 = 50;
-    s.callLocIdx = 185; s.pc = 3; return s.tmp_0;
+    s.callLocIdx = 172; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
     s.tmp_0 = Sprite_setFlag__P2206_mk(s);
-    s.tmp_0.arg0 = globals.machinegunpowerup___40121;
+    s.tmp_0.arg0 = globals.machinegunpowerup___26687;
     s.tmp_0.arg1 = 4;
     s.tmp_0.arg2 = false;
-    s.callLocIdx = 186; s.pc = 4; return s.tmp_0;
+    s.callLocIdx = 173; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P40371.info = {"start":29695,"length":902,"line":411,"column":29,"endLine":433,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P26896.info = {"start":28102,"length":902,"line":358,"column":29,"endLine":380,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P40371_mk(s) {
+function inline__P26896_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P40371, depth: s.depth + 1,
+        parent: s, fn: inline__P26896, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
 
-const _hex40375 = pxsim.BufferMethods.createBufferFromHex("870410001000000000111111111111001011111111111101111111f111111111111111ff1f111111111111f1111111111111111111111111111111111111111111111111111111111111f11f1111111111111f1f1f111111111111ff1111111111111111111111111111111111111111111111111111111110111111111111010011111111111100")
-
-
-
-
-function inline__P40387(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    s.tmp_0 = sprites_create__P2064_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex40391);
-    s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = globals.sniperpowerup___39982;
-    s.callLocIdx = 188; s.pc = 1; return s.tmp_0;
-  case 1:
-    r0 = s.retval;
-    globals.sniperbullet___40119 = (r0);
-    s.tmp_0 = Sprite_setPosition__P2196_mk(s);
-    s.tmp_0.arg0 = globals.sniperbullet___40119;
-    r0 = pxsim.Math_.randomRange(0, 150);
-    s.tmp_0.arg1 = r0;
-    s.tmp_0.arg2 = 0;
-    s.callLocIdx = 189; s.pc = 2; return s.tmp_0;
-  case 2:
-    r0 = s.retval;
-    s.tmp_0 = Sprite_setVelocity__P2197_mk(s);
-    s.tmp_0.arg0 = globals.sniperbullet___40119;
-    s.tmp_0.arg1 = 0;
-    s.tmp_0.arg2 = 50;
-    s.callLocIdx = 190; s.pc = 3; return s.tmp_0;
-  case 3:
-    r0 = s.retval;
-    s.tmp_0 = Sprite_setFlag__P2206_mk(s);
-    s.tmp_0.arg0 = globals.sniperbullet___40119;
-    s.tmp_0.arg1 = 4;
-    s.tmp_0.arg2 = true;
-    s.callLocIdx = 191; s.pc = 4; return s.tmp_0;
-  case 4:
-    r0 = s.retval;
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-inline__P40387.info = {"start":30628,"length":887,"line":434,"column":29,"endLine":456,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
-
-function inline__P40387_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: inline__P40387, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-} }
-
-const _hex40391 = pxsim.BufferMethods.createBufferFromHex("870410001000000000111111111111001011111111111101111111f111111111111111ff1f111111111111f1111111111111111111111111111111111111111111111111111111111111f1ff111111111111ffff1f1111111111f1ff1111111111111111111111111111111111111111111111111111111110111111111111010011111111111100")
+const _hex26900 = pxsim.BufferMethods.createBufferFromHex("870410001000000000111111111111001011111111111101111111f111111111111111ff1f111111111111f1111111111111111111111111111111111111111111111111111111111111f11f1111111111111f1f1f111111111111ff1111111111111111111111111111111111111111111111111111111110111111111111010011111111111100")
 
 
 
@@ -35268,6 +35029,224 @@ function StatusBarSprite_value_inline__P16492_mk(s) {
 
 
 
+function sprites_onOverlap__P2237(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    s.sc___16510 = undefined;
+    s.overlapHandlers___16513 = undefined;
+    s.overlapMap___16516 = undefined;
+    s.associate___16519 = undefined;
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.arg2 = (s.lambdaArgs[2]);
+      s.lambdaArgs = null;
+    }
+    r0 = (s.arg0 == undefined);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    r0 = s.tmp_0;
+    { step = 2; continue; }
+  case 1:
+    r0 = (s.arg1 == undefined);
+  case 2:
+    // jmp value (already in r0)
+    s.tmp_1 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_1);
+    if (!r0) { step = 3; continue; }
+    r0 = s.tmp_1;
+    { step = 4; continue; }
+  case 3:
+    r0 = pxsim_numops_toBoolDecr(s.arg2);
+    s.tmp_2 = r0;
+    r0 = pxsim_Boolean__bang(s.tmp_2);
+  case 4:
+    // jmp value (already in r0)
+    s.tmp_3 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_3);
+    if (!r0) { step = 5; continue; }
+    { step = 7; continue; }
+  case 5:
+  case 6:
+    s.tmp_4 = game_currentScene__P2685_mk(s);
+    s.callLocIdx = 612; s.pc = 8; return s.tmp_4;
+  case 8:
+    r0 = s.retval;
+    s.sc___16510 = (r0);
+    r0 = s.sc___16510.fields["overlapHandlers"];
+    s.overlapHandlers___16513 = (r0);
+    r0 = s.sc___16510.fields["overlapMap"];
+    s.overlapMap___16516 = (r0);
+    r0 = pxsim_pxtcore_mkAction(1, associate__P16519);
+    s.tmp_0 = r0;
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.overlapMap___16516);
+    s.associate___16519 = (s.tmp_0);
+    s.tmp_1 = lambda_3_mk(s);
+    s.tmp_1.argL = s.associate___16519;
+    s.tmp_1.arg0 = s.arg0;
+    s.tmp_1.arg1 = s.arg1;
+    setupLambda(s.tmp_1, s.tmp_1.argL);
+    s.callLocIdx = 613; s.pc = 9; return s.tmp_1;
+  case 9:
+    r0 = s.retval;
+    s.tmp_0 = lambda_3_mk(s);
+    s.tmp_0.argL = s.associate___16519;
+    s.tmp_0.arg0 = s.arg1;
+    s.tmp_0.arg1 = s.arg0;
+    setupLambda(s.tmp_0, s.tmp_0.argL);
+    s.callLocIdx = 614; s.pc = 10; return s.tmp_0;
+  case 10:
+    r0 = s.retval;
+    r0 = pxsim_pxtcore_mkClassInstance(scene_OverlapHandler__C2544_VT);
+    s.tmp_0 = r0;
+    s.tmp_1 = scene_OverlapHandler_constructor__P2545_mk(s);
+    s.tmp_1.arg0 = s.tmp_0;
+    s.tmp_1.arg1 = s.arg0;
+    s.tmp_1.arg2 = s.arg1;
+    s.tmp_1.arg3 = s.arg2;
+    s.callLocIdx = 615; s.pc = 11; return s.tmp_1;
+  case 11:
+    r0 = s.retval;
+    r0 = pxsim_Array__push(s.overlapHandlers___16513, s.tmp_0);
+  case 7:
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+sprites_onOverlap__P2237.info = {"start":1603,"length":755,"line":50,"column":4,"endLine":74,"endColumn":5,"fileName":"pxt_modules/game/spriteevents.ts","functionName":"onOverlap","argumentNames":["kind","otherKind","handler"]}
+
+function sprites_onOverlap__P2237_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: sprites_onOverlap__P2237, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
+  sc___16510: undefined,
+  overlapHandlers___16513: undefined,
+  overlapMap___16516: undefined,
+  associate___16519: undefined,
+  arg0: undefined,
+  arg1: undefined,
+  arg2: undefined,
+} }
+
+
+
+
+
+function associate__P16519(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = pxsim_pxtrt.mapGetGeneric(s.caps[0], s.arg0);
+    s.tmp_2 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_2);
+    s.tmp_1 = r0;
+    r0 = pxsim_Boolean__bang(s.tmp_1);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    s.tmp_3 = r0 = s.caps[0];
+    s.tmp_4 = r0 = s.arg0;
+    r0 = pxsim_Array__mk();
+    s.tmp_5 = r0;
+    r0 = pxsim_pxtrt.mapSetGeneric(s.tmp_3, s.tmp_4, s.tmp_5);
+  case 1:
+  case 2:
+    r0 = pxsim_pxtrt.mapGetGeneric(s.caps[0], s.arg0);
+    s.tmp_0 = r0;
+    r0 = pxsim_Array__push(s.tmp_0, s.arg1);
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+associate__P16519.info = {"start":1940,"length":172,"line":56,"column":8,"endLine":62,"endColumn":9,"fileName":"pxt_modules/game/spriteevents.ts","functionName":"associate","argumentNames":["a","b"]}
+
+function associate__P16519_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: associate__P16519, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
+  tmp_5: undefined,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function scene_OverlapHandler_constructor__P2545(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.arg2 = (s.lambdaArgs[2]);
+      s.arg3 = (s.lambdaArgs[3]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, scene_OverlapHandler__C2544_VT)) failedCast(r0);
+    r0 = (s.arg0).fields["kind"] = (s.arg1);
+    r0 = (s.arg0).fields["otherKind"] = (s.arg2);
+    r0 = (s.arg0).fields["handler"] = (s.arg3);
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+scene_OverlapHandler_constructor__P2545.info = {"start":655,"length":171,"line":22,"column":8,"endLine":26,"endColumn":13,"fileName":"pxt_modules/game/scene.ts","functionName":"inline","argumentNames":["this","kind","otherKind","handler"]}
+
+function scene_OverlapHandler_constructor__P2545_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: scene_OverlapHandler_constructor__P2545, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  arg0: undefined,
+  arg1: undefined,
+  arg2: undefined,
+  arg3: undefined,
+} }
+
+
+
+
+
 function music_stopAllSounds__P1611(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
@@ -37778,73 +37757,6 @@ function music_Melody_play__P1619_mk(s) {
 
 
 
-function statusbars_onZero__P4051(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    s.zeroHandlers___17506 = undefined;
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.lambdaArgs = null;
-    }
-    s.tmp_0 = statusbars_getZeroHandlers__P6636_mk(s);
-    s.callLocIdx = 1824; s.pc = 3; return s.tmp_0;
-  case 3:
-    r0 = s.retval;
-    s.zeroHandlers___17506 = (r0);
-    r0 = pxsim_numops_toBoolDecr(s.zeroHandlers___17506);
-    s.tmp_1 = r0;
-    r0 = pxsim_Boolean__bang(s.tmp_1);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    r0 = pxsim_Array__mk();
-    s.tmp_2 = r0;
-    s.zeroHandlers___17506 = (r0);
-    s.tmp_5 = game_currentScene__P2685_mk(s);
-    s.callLocIdx = 1825; s.pc = 4; return s.tmp_5;
-  case 4:
-    r0 = s.retval;
-    s.tmp_4 = r0;
-    r0 = s.tmp_4.fields["_data"];
-    s.tmp_3 = r0;
-    r0 = pxsim_pxtrt.mapSetGeneric(s.tmp_3, globals.ZERO_HANDLERS_KEY___6609, s.tmp_2);
-  case 1:
-  case 2:
-    r0 = pxsim_Array_.setAt(s.zeroHandlers___17506, s.arg0, s.arg1);
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-statusbars_onZero__P4051.info = {"start":28772,"length":288,"line":825,"column":4,"endLine":831,"endColumn":5,"fileName":"pxt_modules/pxt-status-bar/status-bar.ts","functionName":"onZero","argumentNames":["kind","handler"]}
-
-function statusbars_onZero__P4051_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: statusbars_onZero__P4051, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  tmp_5: undefined,
-  zeroHandlers___17506: undefined,
-  arg0: undefined,
-  arg1: undefined,
-} }
-
-
-
-
-
 function Sprite_destroy__P2215(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
@@ -38725,7 +38637,7 @@ function Sprite_kind__P2194_mk(s) {
 
 
 
-function sprites_onOverlap__P2237(s) {
+function statusbars_onZero__P4051(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -38735,156 +38647,47 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.sc___16510 = undefined;
-    s.overlapHandlers___16513 = undefined;
-    s.overlapMap___16516 = undefined;
-    s.associate___16519 = undefined;
+    s.zeroHandlers___17506 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
-      s.arg2 = (s.lambdaArgs[2]);
       s.lambdaArgs = null;
     }
-    r0 = (s.arg0 == undefined);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    r0 = s.tmp_0;
-    { step = 2; continue; }
-  case 1:
-    r0 = (s.arg1 == undefined);
-  case 2:
-    // jmp value (already in r0)
-    s.tmp_1 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_1);
-    if (!r0) { step = 3; continue; }
-    r0 = s.tmp_1;
-    { step = 4; continue; }
+    s.tmp_0 = statusbars_getZeroHandlers__P6636_mk(s);
+    s.callLocIdx = 1824; s.pc = 3; return s.tmp_0;
   case 3:
-    r0 = pxsim_numops_toBoolDecr(s.arg2);
-    s.tmp_2 = r0;
-    r0 = pxsim_Boolean__bang(s.tmp_2);
-  case 4:
-    // jmp value (already in r0)
-    s.tmp_3 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_3);
-    if (!r0) { step = 5; continue; }
-    { step = 7; continue; }
-  case 5:
-  case 6:
-    s.tmp_4 = game_currentScene__P2685_mk(s);
-    s.callLocIdx = 612; s.pc = 8; return s.tmp_4;
-  case 8:
     r0 = s.retval;
-    s.sc___16510 = (r0);
-    r0 = s.sc___16510.fields["overlapHandlers"];
-    s.overlapHandlers___16513 = (r0);
-    r0 = s.sc___16510.fields["overlapMap"];
-    s.overlapMap___16516 = (r0);
-    r0 = pxsim_pxtcore_mkAction(1, associate__P16519);
-    s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.overlapMap___16516);
-    s.associate___16519 = (s.tmp_0);
-    s.tmp_1 = lambda_3_mk(s);
-    s.tmp_1.argL = s.associate___16519;
-    s.tmp_1.arg0 = s.arg0;
-    s.tmp_1.arg1 = s.arg1;
-    setupLambda(s.tmp_1, s.tmp_1.argL);
-    s.callLocIdx = 613; s.pc = 9; return s.tmp_1;
-  case 9:
-    r0 = s.retval;
-    s.tmp_0 = lambda_3_mk(s);
-    s.tmp_0.argL = s.associate___16519;
-    s.tmp_0.arg0 = s.arg1;
-    s.tmp_0.arg1 = s.arg0;
-    setupLambda(s.tmp_0, s.tmp_0.argL);
-    s.callLocIdx = 614; s.pc = 10; return s.tmp_0;
-  case 10:
-    r0 = s.retval;
-    r0 = pxsim_pxtcore_mkClassInstance(scene_OverlapHandler__C2544_VT);
-    s.tmp_0 = r0;
-    s.tmp_1 = scene_OverlapHandler_constructor__P2545_mk(s);
-    s.tmp_1.arg0 = s.tmp_0;
-    s.tmp_1.arg1 = s.arg0;
-    s.tmp_1.arg2 = s.arg1;
-    s.tmp_1.arg3 = s.arg2;
-    s.callLocIdx = 615; s.pc = 11; return s.tmp_1;
-  case 11:
-    r0 = s.retval;
-    r0 = pxsim_Array__push(s.overlapHandlers___16513, s.tmp_0);
-  case 7:
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-sprites_onOverlap__P2237.info = {"start":1603,"length":755,"line":50,"column":4,"endLine":74,"endColumn":5,"fileName":"pxt_modules/game/spriteevents.ts","functionName":"onOverlap","argumentNames":["kind","otherKind","handler"]}
-
-function sprites_onOverlap__P2237_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: sprites_onOverlap__P2237, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  sc___16510: undefined,
-  overlapHandlers___16513: undefined,
-  overlapMap___16516: undefined,
-  associate___16519: undefined,
-  arg0: undefined,
-  arg1: undefined,
-  arg2: undefined,
-} }
-
-
-
-
-
-function associate__P16519(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.lambdaArgs = null;
-    }
-    r0 = pxsim_pxtrt.mapGetGeneric(s.caps[0], s.arg0);
-    s.tmp_2 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_2);
+    s.zeroHandlers___17506 = (r0);
+    r0 = pxsim_numops_toBoolDecr(s.zeroHandlers___17506);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.tmp_3 = r0 = s.caps[0];
-    s.tmp_4 = r0 = s.arg0;
     r0 = pxsim_Array__mk();
-    s.tmp_5 = r0;
-    r0 = pxsim_pxtrt.mapSetGeneric(s.tmp_3, s.tmp_4, s.tmp_5);
+    s.tmp_2 = r0;
+    s.zeroHandlers___17506 = (r0);
+    s.tmp_5 = game_currentScene__P2685_mk(s);
+    s.callLocIdx = 1825; s.pc = 4; return s.tmp_5;
+  case 4:
+    r0 = s.retval;
+    s.tmp_4 = r0;
+    r0 = s.tmp_4.fields["_data"];
+    s.tmp_3 = r0;
+    r0 = pxsim_pxtrt.mapSetGeneric(s.tmp_3, globals.ZERO_HANDLERS_KEY___6609, s.tmp_2);
   case 1:
   case 2:
-    r0 = pxsim_pxtrt.mapGetGeneric(s.caps[0], s.arg0);
-    s.tmp_0 = r0;
-    r0 = pxsim_Array__push(s.tmp_0, s.arg1);
+    r0 = pxsim_Array_.setAt(s.zeroHandlers___17506, s.arg0, s.arg1);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-associate__P16519.info = {"start":1940,"length":172,"line":56,"column":8,"endLine":62,"endColumn":9,"fileName":"pxt_modules/game/spriteevents.ts","functionName":"associate","argumentNames":["a","b"]}
+statusbars_onZero__P4051.info = {"start":28772,"length":288,"line":825,"column":4,"endLine":831,"endColumn":5,"fileName":"pxt_modules/pxt-status-bar/status-bar.ts","functionName":"onZero","argumentNames":["kind","handler"]}
 
-function associate__P16519_mk(s) {
+function statusbars_onZero__P4051_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: associate__P16519, depth: s.depth + 1,
+        parent: s, fn: statusbars_onZero__P4051, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -38892,51 +38695,9 @@ function associate__P16519_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   tmp_5: undefined,
+  zeroHandlers___17506: undefined,
   arg0: undefined,
   arg1: undefined,
-} }
-
-
-
-
-
-function scene_OverlapHandler_constructor__P2545(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.arg2 = (s.lambdaArgs[2]);
-      s.arg3 = (s.lambdaArgs[3]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, scene_OverlapHandler__C2544_VT)) failedCast(r0);
-    r0 = (s.arg0).fields["kind"] = (s.arg1);
-    r0 = (s.arg0).fields["otherKind"] = (s.arg2);
-    r0 = (s.arg0).fields["handler"] = (s.arg3);
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-scene_OverlapHandler_constructor__P2545.info = {"start":655,"length":171,"line":22,"column":8,"endLine":26,"endColumn":13,"fileName":"pxt_modules/game/scene.ts","functionName":"inline","argumentNames":["this","kind","otherKind","handler"]}
-
-function scene_OverlapHandler_constructor__P2545_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: scene_OverlapHandler_constructor__P2545, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  arg0: undefined,
-  arg1: undefined,
-  arg2: undefined,
-  arg3: undefined,
 } }
 
 
@@ -62676,11 +62437,28 @@ const RingFactory__C16335_VT = mkVTable({
     "setRadius": particles_RadialFactory_setRadius__P2909,
   },
 });
+const scene_OverlapHandler__C2544_VT = mkVTable({
+  name: "OverlapHandler",
+  numFields: 3,
+  classNo: 68,
+  lastSubtypeNo: 68,
+  maxBgInstances: null,
+  methods: {
+  },
+  iface: {
+    "kind": null,
+    "set/kind": null,
+    "otherKind": null,
+    "set/otherKind": null,
+    "handler": null,
+    "set/handler": null,
+  },
+});
 const effects_ImageEffect__C2970_VT = mkVTable({
   name: "ImageEffect",
   numFields: 4,
-  classNo: 68,
-  lastSubtypeNo: 68,
+  classNo: 69,
+  lastSubtypeNo: 69,
   maxBgInstances: null,
   methods: {
   },
@@ -62781,23 +62559,6 @@ const particles_StarFactory__C2925_VT = mkVTable({
     "set/images": null,
     "createParticle": particles_StarFactory_createParticle__P2930,
     "drawParticle": particles_StarFactory_drawParticle__P2931,
-  },
-});
-const scene_OverlapHandler__C2544_VT = mkVTable({
-  name: "OverlapHandler",
-  numFields: 3,
-  classNo: 69,
-  lastSubtypeNo: 69,
-  maxBgInstances: null,
-  methods: {
-  },
-  iface: {
-    "kind": null,
-    "set/kind": null,
-    "otherKind": null,
-    "set/otherKind": null,
-    "handler": null,
-    "set/handler": null,
   },
 });
 const scene_systemMenu_PauseMenu__C2776_VT = mkVTable({
@@ -62994,7 +62755,7 @@ const sprites_BaseSpriteSayRenderer__C2048_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["transparency16___4080","boss___39970","bossprite___39973","powerup___39976","projectile2___39979","sniperpowerup___39982","Ammo___39985","boolean2___39994","snipershots___40001","boss1___40011","mySprite___40023","statusbar___40047","boolean1___40076","machinegunammo___40083","statusbar2___40115","Enemy1___40131","counterboss___40129","projectile___40127","mySprite2___40125","mySprite3___40123","machinegunpowerup___40121","sniperbullet___40119"])
+const breakpoints = setupDebugger(1, ["transparency16___4080","boss___26557","bossprite___26560","powerup___26563","projectile2___26566","Ammo___26569","boss1___26579","mySprite___26591","statusbar___26615","boolean1___26644","machinegunammo___26651","statusbar2___26683","Enemy1___26697","counterboss___26695","projectile___26693","mySprite2___26691","mySprite3___26689","machinegunpowerup___26687"])
 
-return _main___P40725
+return _main___P27272
 })
