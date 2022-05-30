@@ -4,10 +4,15 @@ namespace SpriteKind {
     export const powerup = SpriteKind.create()
     export const projectile2 = SpriteKind.create()
     export const sniperpowerup = SpriteKind.create()
+    export const medkit = SpriteKind.create()
 }
 namespace StatusBarKind {
     export const Ammo = StatusBarKind.create()
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.medkit, function (sprite, otherSprite) {
+    otherSprite.destroy()
+    statusbar.value += 100
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.sniperpowerup, function (sprite, otherSprite) {
     boolean2 = 1
     otherSprite.destroy()
@@ -55,6 +60,7 @@ let mySprite3: Sprite = null
 let projectile: Sprite = null
 let counterboss = 0
 let Enemy1: Sprite = null
+let healthpowerup: Sprite = null
 let mySprite2: Sprite = null
 let statusbar2: StatusBarSprite = null
 let machinegunammo = 0
@@ -217,6 +223,7 @@ statusbar = statusbars.create(20, 4, StatusBarKind.Health)
 statusbar.attachToSprite(mySprite, 5, 0)
 statusbar.setColor(2, 3)
 statusbar.setLabel("HP", 1)
+statusbar.max = 100
 statusbar.value = 100
 game.onUpdateInterval(5000, function () {
     for (let index = 0; index < 5; index++) {
@@ -258,6 +265,28 @@ game.onUpdateInterval(5000, function () {
         mySprite2.setVelocity(0, 50)
         mySprite2.setFlag(SpriteFlag.AutoDestroy, true)
     }
+})
+game.onUpdateInterval(2000, function () {
+    healthpowerup = sprites.create(img`
+        . . 7 7 7 7 7 7 7 7 7 7 7 7 . . 
+        . 7 7 7 7 7 7 7 7 7 7 7 7 7 7 . 
+        7 7 7 7 7 7 7 1 1 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 1 1 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 1 1 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 1 1 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 1 1 7 7 7 7 7 7 7 
+        7 7 1 1 1 1 1 1 1 1 1 1 1 1 7 7 
+        7 7 1 1 1 1 1 1 1 1 1 1 1 1 7 7 
+        7 7 7 7 7 7 7 1 1 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 1 1 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 1 1 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 1 1 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 1 1 7 7 7 7 7 7 7 
+        . 7 7 7 7 7 7 7 7 7 7 7 7 7 7 . 
+        . . 7 7 7 7 7 7 7 7 7 7 7 7 . . 
+        `, SpriteKind.medkit)
+    healthpowerup.setPosition(randint(0, 150), 0)
+    healthpowerup.setVelocity(0, 50)
 })
 game.onUpdateInterval(1000, function () {
     Enemy1 = sprites.create(img`
