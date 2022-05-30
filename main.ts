@@ -5,7 +5,6 @@ namespace SpriteKind {
     export const projectile2 = SpriteKind.create()
     export const sniperpowerup = SpriteKind.create()
     export const medkit = SpriteKind.create()
-    export const geh = SpriteKind.create()
 }
 namespace StatusBarKind {
     export const Ammo = StatusBarKind.create()
@@ -48,10 +47,6 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.projectile2, function (sprit
     statusbar.max = 2
     statusbar3.value += -1
 })
-sprites.onOverlap(SpriteKind.geh, SpriteKind.Projectile, function (sprite, otherSprite) {
-    otherSprite.destroy(effects.fountain, 200)
-    statusbar4.value += -1
-})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.powerup, function (sprite, otherSprite) {
     boolean1 = 1
     otherSprite.destroy()
@@ -78,7 +73,6 @@ let healthpowerup: Sprite = null
 let statusbar2: StatusBarSprite = null
 let machinegunammo = 0
 let boolean1 = 0
-let statusbar4: StatusBarSprite = null
 let statusbar3: StatusBarSprite = null
 let mySprite2: Sprite = null
 let boss1: Sprite = null
@@ -413,7 +407,7 @@ forever(function () {
     }
 })
 game.onUpdateInterval(500, function () {
-    if (_2nd_boss_counter >= 1) {
+    if (_2nd_boss_counter >= 3) {
         _2nd_boss_counter = 0
         counterboss = 0
         The_Geh = sprites.create(img`
@@ -433,14 +427,9 @@ game.onUpdateInterval(500, function () {
             3 3 3 3 3 f f f f f f 3 3 3 3 3 
             . 3 3 3 3 3 3 3 3 3 3 3 3 3 3 . 
             . . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
-            `, SpriteKind.geh)
-        The_Geh.setVelocity(10, 10)
+            `, SpriteKind.projectile2)
+        The_Geh.setVelocity(1, 1)
         The_Geh.setBounceOnWall(true)
-        statusbar4 = statusbars.create(20, 4, StatusBarKind.Health)
-        statusbar.setLabel("The GEH: ")
-        statusbar.attachToSprite(The_Geh)
-        statusbar.max = 10
-        statusbar.value = 10
         animation.runImageAnimation(
         The_Geh,
         assets.animation`Eric the GEH`,
@@ -467,8 +456,8 @@ game.onUpdateInterval(100, function () {
     }
 })
 game.onUpdateInterval(200, function () {
-    if (counterboss == 20) {
-        for (let index = 0; index < 5; index++) {
+    if (counterboss == 10) {
+        for (let index = 0; index < 1; index++) {
             mySprite3 = sprites.create(img`
                 . . . . . . f f f f . . . . . . 
                 . . . . . . f 2 2 f . . . . . . 
