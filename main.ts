@@ -24,9 +24,7 @@ statusbars.onZero(StatusBarKind.EnemyHealth, function (status) {
     music.jumpUp.play()
 })
 statusbars.onZero(StatusBarKind.nukehealth, function (status) {
-    while (true) {
-        mySprite2.destroy(effects.fire, 100)
-    }
+    mySprite2.destroy(effects.fire, 100)
 })
 statusbars.onZero(StatusBarKind.Health, function (status) {
     mySprite.destroy()
@@ -46,6 +44,7 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSp
     info.changeScoreBy(1)
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.projectile2, function (sprite, otherSprite) {
+    statusbar.max = 2
     statusbar3.value += -1
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.powerup, function (sprite, otherSprite) {
