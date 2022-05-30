@@ -65,6 +65,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.boss, function (sprite2, oth
 let sniperbullet: Sprite = null
 let machinegunpowerup: Sprite = null
 let mySprite3: Sprite = null
+let The_Geh: Sprite = null
 let projectile: Sprite = null
 let counterboss = 0
 let Enemy1: Sprite = null
@@ -226,8 +227,8 @@ mySprite = sprites.create(img`
 mySprite.setStayInScreen(true)
 mySprite.setPosition(74, 99)
 controller.moveSprite(mySprite, 100, 0)
-info.setLife(3)
 info.setScore(0)
+let _2nd_boss_counter = 0
 statusbar = statusbars.create(20, 4, StatusBarKind.Health)
 statusbar.attachToSprite(mySprite, 5, 0)
 statusbar.setColor(2, 3)
@@ -367,7 +368,7 @@ forever(function () {
             `, mySprite, 0, -1000)
         music.footstep.play()
         snipershots += -1
-        pause(1000)
+        pause(200)
         if (snipershots <= 0) {
             projectile = sprites.createProjectileFromSprite(img`
                 . . . . . . . . 
@@ -405,6 +406,38 @@ forever(function () {
         music.stopAllSounds()
     }
 })
+game.onUpdateInterval(500, function () {
+    if (_2nd_boss_counter >= 1) {
+        _2nd_boss_counter = 0
+        counterboss = 0
+        The_Geh = sprites.create(img`
+            . . f f f f f f f f f f f f . . 
+            . f f f f f f f f f f f f f f . 
+            f f f f f f f f f f f f f f f f 
+            f f f f f f f f f f f f f f f f 
+            f f f f f f f f f f f f f f f f 
+            f f f f f f f f f f f f f f f f 
+            f f f f f f f f f f f f f f f f 
+            3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+            3 3 3 3 3 f 3 3 3 3 f 3 3 3 3 3 
+            3 3 3 3 3 f 3 3 3 3 f 3 3 3 3 3 
+            3 3 3 3 3 f 3 3 3 3 f 3 3 3 3 3 
+            3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+            3 3 3 3 3 f 3 3 3 3 f 3 3 3 3 3 
+            3 3 3 3 3 f f f f f f 3 3 3 3 3 
+            . 3 3 3 3 3 3 3 3 3 3 3 3 3 3 . 
+            . . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
+            `, SpriteKind.projectile2)
+        The_Geh.setVelocity(1, 1)
+        The_Geh.setBounceOnWall(true)
+        animation.runImageAnimation(
+        The_Geh,
+        assets.animation`Eric the GEH`,
+        100,
+        true
+        )
+    }
+})
 game.onUpdateInterval(100, function () {
     if (counterboss == 20) {
         boss1 = sprites.create(assets.image`Boss`, SpriteKind.boss)
@@ -417,6 +450,7 @@ game.onUpdateInterval(100, function () {
         boss1.setVelocity(50, 50)
         music.siren.play()
         counterboss = 0
+        _2nd_boss_counter += 1
     } else {
         counterboss = counterboss
     }

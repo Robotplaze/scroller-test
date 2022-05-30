@@ -4,6 +4,13 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Boss"
     },
+    "anim1": {
+        "namespace": "myAnimations",
+        "id": "anim1",
+        "mimeType": "application/mkcd-animation",
+        "data": "NjQwMDEwMDAxMDAwMDQwMDAwZmZmZmZmZmZmZmZmMDBmMGZmZmZmZmZmZmZmZjBmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmYzMzMzMzMzMzMzMzMzMzMzMzMzM2YzMzMzMzNmMzMzMzMzMzNmMzMzMzMzZjMzMzMzMzMzZjMzMzMzM2YzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzNmMzMzMzMzZjMzMzMzMzMzZjNmZmZmM2YzMzMzMzAzMzMzMzMzMzMzMzMwMzAwMzMzMzMzMzMzMzMzMDAwMDMzMzMzM2YzZmZmZjAwMzAzMzMzMzNmM2ZmZmYwZjMzMzMzMzMzZjNmZmZmZmYzMzMzMzMzM2YzZmZmZmZmMzMzMzMzMzNmM2ZmZmZmZjMzZmZmM2ZmZjNmZmZmZmYzMzNmMzMzM2YzZmZmZmZmMzMzZjMzMzNmM2ZmZmZmZjMzM2YzMzMzZjNmZmZmZmYzMzNmMzMzM2YzZmZmZmZmMzNmZmYzZmZmM2ZmZmZmZjMzMzMzMzMzZjNmZmZmZmYzMzMzMzMzM2YzZmZmZmZmMzMzMzMzMzNmM2ZmZmZmZjMwMzMzMzMzZjNmZmZmMGYwMDMzMzMzM2YzZmZmZjAwMDAzMzMzMzMzMzMzMzMwMDMwMzMzMzMzMzMzMzMzMDMzMzMzZjNmZmZmM2YzMzMzMzMzM2YzMzMzMzNmMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzZjMzMzMzM2YzMzMzMzMzM2YzMzMzMzNmMzMzMzMzMzNmMzMzMzMzZjMzMzMzMzMzMzMzMzMzMzMzMzMzZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmMGZmZmZmZmZmZmZmZjBmMDBmZmZmZmZmZmZmZmYwMDAwZmZmZjNmMzMzMzMzMDBmMGZmZmYzZjMzMzMzMzAzZmZmZmZmM2YzMzMzMzMzM2ZmZmZmZjNmMzMzMzMzMzNmZmZmZmYzZjMzMzMzMzMzZmZmZmZmM2ZmZjNmZmYzM2ZmZmZmZjNmMzMzM2YzMzNmZmZmZmYzZjMzMzNmMzMzZmZmZmZmM2YzMzMzZjMzM2ZmZmZmZjNmMzMzM2YzMzNmZmZmZmYzZmZmM2ZmZjMzZmZmZmZmM2YzMzMzMzMzM2ZmZmZmZjNmMzMzMzMzMzNmZmZmZmYzZjMzMzMzMzMzZjBmZmZmM2YzMzMzMzMwMzAwZmZmZjNmMzMzMzMzMDA=",
+        "displayName": "Eric the GEH"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",

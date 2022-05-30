@@ -28,7 +28,76 @@ f b c c c f f f f f f c c c c f
 
     helpers._registerFactory("animation", function(name: string) {
         switch(helpers.stringTrim(name)) {
-
+            case "Eric the GEH":
+            case "anim1":return [img`
+. . f f f f f f f f f f f f . . 
+. f f f f f f f f f f f f f f . 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 f 3 3 3 3 f 3 3 3 3 3 
+3 3 3 3 3 f 3 3 3 3 f 3 3 3 3 3 
+3 3 3 3 3 f 3 3 3 3 f 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 f 3 3 3 3 f 3 3 3 3 3 
+3 3 3 3 3 f f f f f f 3 3 3 3 3 
+. 3 3 3 3 3 3 3 3 3 3 3 3 3 3 . 
+. . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
+`, img`
+. . 3 3 3 3 3 3 3 f f f f f . . 
+. 3 3 3 3 3 3 3 3 f f f f f f . 
+3 3 3 3 3 3 3 3 3 f f f f f f f 
+3 3 3 3 3 3 3 3 3 f f f f f f f 
+3 3 3 3 3 3 3 3 3 f f f f f f f 
+3 3 f f 3 f f f 3 f f f f f f f 
+3 3 f 3 3 3 3 3 3 f f f f f f f 
+3 3 f 3 3 3 3 3 3 f f f f f f f 
+3 3 f 3 3 3 3 3 3 f f f f f f f 
+3 3 f 3 3 3 3 3 3 f f f f f f f 
+3 3 f f 3 f f f 3 f f f f f f f 
+3 3 3 3 3 3 3 3 3 f f f f f f f 
+3 3 3 3 3 3 3 3 3 f f f f f f f 
+3 3 3 3 3 3 3 3 3 f f f f f f f 
+. 3 3 3 3 3 3 3 3 f f f f f f . 
+. . 3 3 3 3 3 3 3 f f f f f . . 
+`, img`
+. . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
+. 3 3 3 3 3 3 3 3 3 3 3 3 3 3 . 
+3 3 3 3 3 f f f f f f 3 3 3 3 3 
+3 3 3 3 3 f 3 3 3 3 f 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 f 3 3 3 3 f 3 3 3 3 3 
+3 3 3 3 3 f 3 3 3 3 f 3 3 3 3 3 
+3 3 3 3 3 f 3 3 3 3 f 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+. f f f f f f f f f f f f f f . 
+. . f f f f f f f f f f f f . . 
+`, img`
+. . f f f f f 3 3 3 3 3 3 3 . . 
+. f f f f f f 3 3 3 3 3 3 3 3 . 
+f f f f f f f 3 3 3 3 3 3 3 3 3 
+f f f f f f f 3 3 3 3 3 3 3 3 3 
+f f f f f f f 3 3 3 3 3 3 3 3 3 
+f f f f f f f 3 f f f 3 f f 3 3 
+f f f f f f f 3 3 3 3 3 3 f 3 3 
+f f f f f f f 3 3 3 3 3 3 f 3 3 
+f f f f f f f 3 3 3 3 3 3 f 3 3 
+f f f f f f f 3 3 3 3 3 3 f 3 3 
+f f f f f f f 3 f f f 3 f f 3 3 
+f f f f f f f 3 3 3 3 3 3 3 3 3 
+f f f f f f f 3 3 3 3 3 3 3 3 3 
+f f f f f f f 3 3 3 3 3 3 3 3 3 
+. f f f f f f 3 3 3 3 3 3 3 3 . 
+. . f f f f f 3 3 3 3 3 3 3 . . 
+`];
         }
         return null;
     })
