@@ -8,6 +8,7 @@ namespace SpriteKind {
 }
 namespace StatusBarKind {
     export const Ammo = StatusBarKind.create()
+    export const nukehealth = StatusBarKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.medkit, function (sprite, otherSprite) {
     otherSprite.destroy()
@@ -21,6 +22,9 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.sniperpowerup, function (sprite,
 statusbars.onZero(StatusBarKind.EnemyHealth, function (status) {
     boss1.destroy()
     music.jumpUp.play()
+})
+statusbars.onZero(StatusBarKind.nukehealth, function (status) {
+    mySprite2.destroy(effects.fire, 500)
 })
 statusbars.onZero(StatusBarKind.Health, function (status) {
     mySprite.destroy()
@@ -38,6 +42,12 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSp
     otherSprite.startEffect(effects.fire, 100)
     statusbar.value += -10
     info.changeScoreBy(1)
+})
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.projectile2, function (sprite, otherSprite) {
+    statusbar3 = statusbars.create(10, 2, StatusBarKind.nukehealth)
+    statusbar3.attachToSprite(mySprite2)
+    statusbar3.max = 2
+    statusbar3.value += -1
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.powerup, function (sprite, otherSprite) {
     boolean1 = 1
@@ -61,10 +71,11 @@ let projectile: Sprite = null
 let counterboss = 0
 let Enemy1: Sprite = null
 let healthpowerup: Sprite = null
-let mySprite2: Sprite = null
 let statusbar2: StatusBarSprite = null
 let machinegunammo = 0
 let boolean1 = 0
+let statusbar3: StatusBarSprite = null
+let mySprite2: Sprite = null
 let boss1: Sprite = null
 let snipershots = 0
 let boolean2 = 0
@@ -226,7 +237,7 @@ statusbar.setLabel("HP", 1)
 statusbar.max = 100
 statusbar.value = 100
 game.onUpdateInterval(5000, function () {
-    for (let index = 0; index < 5; index++) {
+    for (let index = 0; index < 3; index++) {
         mySprite2 = sprites.create(img`
             ................
             .fff..ffff..fff.
@@ -262,7 +273,9 @@ game.onUpdateInterval(5000, function () {
             ................
             `, SpriteKind.projectile2)
         mySprite2.setPosition(randint(0, 120), 20)
-        mySprite2.setVelocity(0, 50)
+        statusbar3 = statusbars.create(10, 2, StatusBarKind.nukehealth)
+        statusbar3.max = 2
+        mySprite2.setVelocity(0, 20)
         mySprite2.setFlag(SpriteFlag.AutoDestroy, true)
     }
 })
