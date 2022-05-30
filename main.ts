@@ -52,10 +52,10 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.boss, function (sprite2, oth
 let sniperbullet: Sprite = null
 let machinegunpowerup: Sprite = null
 let mySprite3: Sprite = null
-let mySprite2: Sprite = null
 let projectile: Sprite = null
 let counterboss = 0
 let Enemy1: Sprite = null
+let mySprite2: Sprite = null
 let statusbar2: StatusBarSprite = null
 let machinegunammo = 0
 let boolean1 = 0
@@ -218,6 +218,31 @@ statusbar.attachToSprite(mySprite, 5, 0)
 statusbar.setColor(2, 15)
 statusbar.setLabel("HP", 1)
 statusbar.value = 100
+game.onUpdateInterval(5000, function () {
+    for (let index = 0; index < 5; index++) {
+        mySprite2 = sprites.create(img`
+            . . . . . . . . . . . . . . . . 
+            . f f f . . f f f f . . f f f . 
+            . f f f f . f c c f . f f f f . 
+            . . f c f f f c c f f f c f . . 
+            . . f c c f f f f f f c c f . . 
+            . . f c c c c c c c c c c f . . 
+            . . f c c c c c c c c c c f . . 
+            . . f c c c c c c c c c c f . . 
+            . . f c c c c c c c c c c f . . 
+            . . f f c c c c c c c c f f . . 
+            . . f 4 f c c c c c c f 4 f . . 
+            . . . f 2 f c c c c f 2 f . . . 
+            . . . f 2 2 f f f f 2 2 f . . . 
+            . . . . f 2 2 2 2 2 2 f . . . . 
+            . . . . f 2 2 2 2 2 2 f . . . . 
+            . . . . . f f f f f f . . . . . 
+            `, SpriteKind.projectile2)
+        mySprite2.setPosition(randint(0, 120), 20)
+        mySprite2.setVelocity(0, 100)
+        mySprite2.setFlag(SpriteFlag.AutoDestroy, true)
+    }
+})
 game.onUpdateInterval(1000, function () {
     Enemy1 = sprites.create(img`
         ...........fffffc...........
@@ -244,7 +269,35 @@ game.onUpdateInterval(1000, function () {
     counterboss += 1
 })
 forever(function () {
-    if (boolean2 == 1) {
+    if (boolean1 == 1) {
+        projectile = sprites.createProjectileFromSprite(img`
+            . . . . . . . . 
+            . . . . . . . . 
+            . . . . . . . . 
+            . . . 5 5 . . . 
+            . . . 5 5 . . . 
+            . . . 5 5 . . . 
+            . . . 5 5 . . . 
+            . . . . . . . . 
+            `, mySprite, 0, -100)
+        music.footstep.play()
+        machinegunammo += -1
+        pause(10)
+        if (machinegunammo <= 0) {
+            projectile = sprites.createProjectileFromSprite(img`
+                . . . . . . . . 
+                . . . . . . . . 
+                . . . . . . . . 
+                . . . 1 1 . . . 
+                . . . 1 1 . . . 
+                . . . 1 1 . . . 
+                . . . 1 1 . . . 
+                . . . . . . . . 
+                `, mySprite, 0, -100)
+            music.pewPew.play()
+            pause(100)
+        }
+    } else if (boolean2 == 1) {
         projectile = sprites.createProjectileFromSprite(img`
             . . . . . . . . 
             . . . . . . . . 
@@ -272,37 +325,7 @@ forever(function () {
             music.pewPew.play()
             pause(100)
         }
-    } else {
-        projectile = sprites.createProjectileFromSprite(img`
-            . . . . . . . . 
-            . . . . . . . . 
-            . . . . . . . . 
-            . . . 1 1 . . . 
-            . . . 1 1 . . . 
-            . . . 1 1 . . . 
-            . . . 1 1 . . . 
-            . . . . . . . . 
-            `, mySprite, 0, -100)
-        music.pewPew.play()
-        pause(100)
-    }
-})
-forever(function () {
-    if (boolean1 == 1) {
-        projectile = sprites.createProjectileFromSprite(img`
-            . . . . . . . . 
-            . . . . . . . . 
-            . . . . . . . . 
-            . . . 5 5 . . . 
-            . . . 5 5 . . . 
-            . . . 5 5 . . . 
-            . . . 5 5 . . . 
-            . . . . . . . . 
-            `, mySprite, 0, -100)
-        music.footstep.play()
-        machinegunammo += -1
-        pause(10)
-        if (machinegunammo <= 0) {
+        if (snipershots <= 0) {
             projectile = sprites.createProjectileFromSprite(img`
                 . . . . . . . . 
                 . . . . . . . . 
@@ -353,33 +376,6 @@ game.onUpdateInterval(100, function () {
         counterboss = 0
     } else {
         counterboss = counterboss
-    }
-})
-game.onUpdateInterval(100, function () {
-    if (counterboss == 20) {
-        for (let index = 0; index < 5; index++) {
-            mySprite2 = sprites.create(img`
-                . . . . . . . . . . . . . . . . 
-                . f f f . . f f f f . . f f f . 
-                . f f f f . f c c f . f f f f . 
-                . . f c f f f c c f f f c f . . 
-                . . f c c f f f f f f c c f . . 
-                . . f c c c c c c c c c c f . . 
-                . . f c c c c c c c c c c f . . 
-                . . f c c c c c c c c c c f . . 
-                . . f c c c c c c c c c c f . . 
-                . . f f c c c c c c c c f f . . 
-                . . f 4 f c c c c c c f 4 f . . 
-                . . . f 2 f c c c c f 2 f . . . 
-                . . . f 2 2 f f f f 2 2 f . . . 
-                . . . . f 2 2 2 2 2 2 f . . . . 
-                . . . . f 2 2 2 2 2 2 f . . . . 
-                . . . . . f f f f f f . . . . . 
-                `, SpriteKind.projectile2)
-            mySprite2.setPosition(randint(0, 120), 20)
-            mySprite2.setVelocity(0, 100)
-            mySprite2.setFlag(SpriteFlag.AutoDestroy, true)
-        }
     }
 })
 game.onUpdateInterval(200, function () {
