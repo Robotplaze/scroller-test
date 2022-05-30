@@ -5,6 +5,7 @@ namespace SpriteKind {
     export const projectile2 = SpriteKind.create()
     export const sniperpowerup = SpriteKind.create()
     export const medkit = SpriteKind.create()
+    export const geh = SpriteKind.create()
 }
 namespace StatusBarKind {
     export const Ammo = StatusBarKind.create()
@@ -47,6 +48,10 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.projectile2, function (sprit
     statusbar.max = 2
     statusbar3.value += -1
 })
+sprites.onOverlap(SpriteKind.geh, SpriteKind.Projectile, function (sprite, otherSprite) {
+    otherSprite.destroy(effects.fountain, 200)
+    statusbar4.value += -1
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.powerup, function (sprite, otherSprite) {
     boolean1 = 1
     otherSprite.destroy()
@@ -73,6 +78,7 @@ let healthpowerup: Sprite = null
 let statusbar2: StatusBarSprite = null
 let machinegunammo = 0
 let boolean1 = 0
+let statusbar4: StatusBarSprite = null
 let statusbar3: StatusBarSprite = null
 let mySprite2: Sprite = null
 let boss1: Sprite = null
@@ -427,9 +433,14 @@ game.onUpdateInterval(500, function () {
             3 3 3 3 3 f f f f f f 3 3 3 3 3 
             . 3 3 3 3 3 3 3 3 3 3 3 3 3 3 . 
             . . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
-            `, SpriteKind.projectile2)
-        The_Geh.setVelocity(1, 1)
+            `, SpriteKind.geh)
+        The_Geh.setVelocity(10, 10)
         The_Geh.setBounceOnWall(true)
+        statusbar4 = statusbars.create(20, 4, StatusBarKind.Health)
+        statusbar.setLabel("The GEH: ")
+        statusbar.attachToSprite(The_Geh)
+        statusbar.max = 10
+        statusbar.value = 10
         animation.runImageAnimation(
         The_Geh,
         assets.animation`Eric the GEH`,
